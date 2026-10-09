@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard | College Attendance Management System</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        College Attendance
+        <small>Management System</small>
+      </div>
+      <nav class="nav-links">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a>Students</a>
+        <a href="attendance.html">Attendance</a>
+        <a>Reports</a>
+        <a>Settings</a>
+      </nav>
+   
+   
+   
+      <a class="logout-link" href="login.html">Logout</a>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <div>
+          <h1>Dashboard</h1>
+          <p class="welcome">
+            Welcome back, Mr. Patil. Here is today's attendance summary.
+          </p>
+        </div>
+        <div class="profile">Mr. Rahul Patil Sir</div>
+      </header>
+      <section class="card-grid">
+        <div class="card">
+          <div class="card-title">Total Students</div>
+          <div class="card-number">120</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Present Today</div>
+          <div class="card-number">102</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Absent Today</div>
+          <div class="card-number">18</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Average Attendance</div>
+          <div class="card-number">85%</div>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Attendance Overview</h2>
+        <div class="overview-row">
+          <span>Present</span>
+          <div class="bar-background">
+            <div class="bar" style="width: 85%;"></div>
+          </div>
+          <strong>102</strong>
+        </div>
+        <div class="overview-row">
+          <span>Absent</span>
+          <div class="bar-background">
+            <div class="bar absent" style="width: 15%;"></div>
+          </div>
+          <strong>18</strong>
+        </div>
+        <div class="overview-row">
+          <span>Late</span>
+          <div class="bar-background">
+            <div class="bar late" style="width: 5%;"></div>
+          </div>
+          <strong>6</strong>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Recent Attendance</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Class</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rehan Mujawar</td>
+                <td>SY CSE Div B</td>
+                <td>02 Sep 2026</td>
+                <td><span class="status present">Present</span></td>
+              </tr>
+              <tr>
+                <td>Parth Gavali</td>
+                <td>SY CSE Div A</td>
+                <td>02 Sep 2026</td>
+                <td><span class="status present">Present</span></td>
+              </tr>
+              <tr>
+                <td>Rahul Kumar</td>
+                <td>SY CSE Div B</td>
+                <td>02 Sep 2026</td>
+                <td><span class="status absent-label">Absent</span></td>
+              </tr>
+              <tr>
+                <td>Soham Patil</td>
+                <td>SY CSE Div A</td>
+                <td>02 Sep 2026</td>
+                <td><span class="status late-label">Late</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
