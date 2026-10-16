@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Defaulter Status | College Attendance</title>
+
+    <link rel="stylesheet" href="04_student_defaulter.css">
+</head>
+
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>College Attendance</h2>
+            <p>Management System</p>
+        </div>
+
+        <nav class="nav">
+
+            <a href="01_student_dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="02_student_attendance.html">
+                My Attendance
+            </a>
+
+            <a href="03_student_reports.html">
+                Attendance Reports
+            </a>
+
+            <a href="04_student_defaulter.html" class="active">
+                Defaulter Status
+            </a>
+
+            <a href="05_student_profile.html">
+                My Profile
+            </a>
+
+            <a href="06_student_correction_requests.html">
+                Correction Requests
+            </a>
+
+            <div class="logout">
+                <a href="#">Logout</a>
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="main">
+
+        <!-- PAGE HEADER -->
+
+        <header class="header">
+
+            <div>
+                <h1>Defaulter Status</h1>
+
+                <p>
+                    Check your attendance eligibility and minimum
+                    attendance requirements.
+                </p>
+            </div>
+
+            <div class="user-badge">
+                Parth Gavali
+            </div>
+
+        </header>
+
+        <!-- ========== STUDENT INFORMATION ========== -->
+
+        <section class="card student-info">
+
+            <div>
+                <h2>Student Attendance Eligibility</h2>
+
+                <p>
+                    Student Name:
+                    <strong>Parth Sambhaji Gavali</strong>
+                </p>
+
+                <p>
+                    Roll Number:
+                    <strong>42</strong>
+                </p>
+
+                <p>
+                    Class:
+                    <strong>SY CSE - Division A</strong>
+                </p>
+            </div>
+
+            <div class="academic-badge">
+                Academic Year 2026 - 2027
+            </div>
+
+        </section>
+
+        <!-- ========== ATTENDANCE STATISTICS ========== -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <p>Total Working Days</p>
+
+                <h2>100</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <p>Present Days</p>
+
+                <h2 class="green-text">68</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <p>Absent Days</p>
+
+                <h2 class="red-text">32</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <p>Current Attendance</p>
+
+                <h2 class="red-text">68%</h2>
+
+            </div>
+
+        </section>
+
+        <!-- ========== DEFAULTER WARNING ========== -->
+
+        <section class="card">
+
+            <h2>Current Defaulter Status</h2>
+
+            <div class="status-box status-danger">
+
+                <div class="status-header">
+
+                    <div>
+                        <h3>⚠ You Are in the Defaulter List</h3>
+
+                        <p>
+                            Your attendance is below the minimum
+                            requirement of 75%.
+                        </p>
+                    </div>
+
+                    <span class="status-badge danger-badge">
+                        Defaulter
+                    </span>
+
+                </div>
+
+                <div class="status-details">
+
+                    <div>
+                        <span>Your Attendance</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div>
+                        <span>Minimum Required</span>
+                        <strong>75%</strong>
+                    </div>
+
+                    <div>
+                        <span>Attendance Shortage</span>
+                        <strong>7%</strong>
+                    </div>
+
+                </div>
+
+                <p class="status-note">
+                    Please attend your upcoming lectures regularly
+                    to improve your attendance and meet the college
+                    attendance requirement.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ========== ATTENDANCE PROGRESS ========== -->
+
+        <section class="card">
+
+            <h2>Attendance Eligibility Progress</h2>
+
+            <div class="progress-heading">
+
+                <span>Current Attendance</span>
+
+                <strong class="red-text">68%</strong>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div class="progress-fill" style="width: 68%;"></div>
+
+                <div class="minimum-marker"></div>
+
+            </div>
+
+            <div class="progress-labels">
+
+                <span>0%</span>
+
+                <span>Minimum Required: 75%</span>
+
+                <span>100%</span>
+
+            </div>
+
+            <div class="progress-message">
+
+                <strong>Attendance Requirement Not Satisfied</strong>
+
+                <p>
+                    Your current attendance is 7 percentage points
+                    below the minimum requirement.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ========== ATTENDANCE SHORTAGE ========== -->
+
+        <section class="card">
+
+            <h2>Attendance Shortage Analysis</h2>
+
+            <p class="section-description">
+                Understand how many additional classes you need
+                to attend to reach the minimum attendance requirement.
+            </p>
+
+            <div class="shortage-grid">
+
+                <div class="shortage-card">
+
+                    <p>Current Attendance</p>
+
+                    <h2>68%</h2>
+
+                    <span>68 out of 100 working days</span>
+
+                </div>
+
+                <div class="shortage-card">
+
+                    <p>Required Attendance</p>
+
+                    <h2>75%</h2>
+
+                    <span>Minimum college requirement</span>
+
+                </div>
+
+                <div class="shortage-card highlight-card">
+
+                    <p>Additional Classes Required</p>
+
+                    <h2>28</h2>
+
+                    <span>Consecutive attended classes</span>
+
+                </div>
+
+            </div>
+
+            <div class="calculation-box">
+
+                <h3>How Is This Calculated?</h3>
+
+                <p>
+                    Current Present Days:
+                    <strong>68</strong>
+                </p>
+
+                <p>
+                    Current Working Days:
+                    <strong>100</strong>
+                </p>
+
+                <p>
+                    Additional Classes Required:
+                    <strong>28</strong>
+                </p>
+
+                <div class="formula">
+
+                    (68 + 28) ÷ (100 + 28) × 100 = 75%
+
+                </div>
+
+                <p class="formula-note">
+                    If you attend the next 28 classes without being
+                    absent, your attendance will reach exactly 75%.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ========== ATTENDANCE GUIDELINES ========== -->
+
+        <section class="card">
+
+            <h2>Attendance Improvement Guidelines</h2>
+
+            <div class="guidelines">
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">01</span>
+
+                    <div>
+                        <h3>Attend Classes Regularly</h3>
+
+                        <p>
+                            Attend upcoming lectures consistently
+                            to improve your overall attendance.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">02</span>
+
+                    <div>
+                        <h3>Monitor Your Attendance</h3>
+
+                        <p>
+                            Check your attendance calendar regularly
+                            to track your present and absent days.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">03</span>
+
+                    <div>
+                        <h3>Report Incorrect Attendance</h3>
+
+                        <p>
+                            If your attendance has been marked
+                            incorrectly, submit an attendance
+                            correction request.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">04</span>
+
+                    <div>
+                        <h3>Maintain Minimum 75% Attendance</h3>
+
+                        <p>
+                            Maintain at least 75% attendance to
+                            avoid being included in the defaulter list.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========== QUICK ACTIONS ========== -->
+
+        <section class="card">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-actions">
+
+                <a href="02_student_attendance.html" class="action-button">
+                    View Attendance Calendar
+                </a>
+
+                <a href="03_student_reports.html" class="action-button">
+                    View Attendance Reports
+                </a>
+
+                <a href="06_student_correction_requests.html"
+                   class="action-button primary-button">
+                    Request Attendance Correction
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
