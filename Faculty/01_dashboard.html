@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faculty Dashboard - College Attendance Management System">
+    <title>Faculty Dashboard | Attendance Management System</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="01_dashboard.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="brand-icon">
+                <i class="icon icon-graduation-cap"></i>
+            </div>
+
+            <div class="brand-info">
+                <h2>AttendEase</h2>
+                <span>Faculty Portal</span>
+            </div>
+        </div>
+
+        <div class="sidebar-navigation">
+
+            <div class="navigation-group">
+                <p class="navigation-label">MAIN MENU</p>
+
+                <a href="dashboard.html" class="nav-item active">
+                    <i class="icon icon-layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="sessions.html" class="nav-item">
+                    <i class="icon icon-timer"></i>
+                    <span>Attendance Sessions</span>
+                </a>
+
+                <a href="attendance.html" class="nav-item">
+                    <i class="icon icon-clipboard-check"></i>
+                    <span>Manage Attendance</span>
+                </a>
+
+                <a href="students.html" class="nav-item">
+                    <i class="icon icon-users"></i>
+                    <span>Student Management</span>
+                </a>
+            </div>
+
+            <div class="navigation-group">
+                <p class="navigation-label">ACADEMIC</p>
+
+                <a href="timetable.html" class="nav-item">
+                    <i class="icon icon-calendar-days"></i>
+                    <span>Faculty Timetable</span>
+                </a>
+
+                <a href="records.html" class="nav-item">
+                    <i class="icon icon-history"></i>
+                    <span>Attendance Records</span>
+                </a>
+            </div>
+
+            <div class="navigation-group">
+                <p class="navigation-label">INSIGHTS</p>
+
+                <a href="analytics.html" class="nav-item">
+                    <i class="icon icon-chart-no-axes-combined"></i>
+                    <span>Attendance Analytics</span>
+                </a>
+
+                <a href="reports.html" class="nav-item">
+                    <i class="icon icon-file-chart-column"></i>
+                    <span>Attendance Reports</span>
+                </a>
+            </div>
+
+            <div class="navigation-group">
+                <p class="navigation-label">GENERAL</p>
+
+                <a href="notifications.html" class="nav-item">
+                    <i class="icon icon-bell"></i>
+                    <span>Notifications</span>
+                    <span class="notification-count">4</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                    <i class="icon icon-settings"></i>
+                    <span>Profile & Settings</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <div class="faculty-mini-profile">
+                <div class="faculty-avatar">RK</div>
+
+                <div class="faculty-mini-details">
+                    <strong>Prof. Rahul Kulkarni</strong>
+                    <span>Computer Science</span>
+                </div>
+            </div>
+
+            <a href="../index.html" class="logout-button">
+                <i class="icon icon-log-out"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+                <div class="breadcrumb">
+                    <span>Faculty Portal</span>
+                    <i class="icon icon-chevron-right"></i>
+                    <strong>Dashboard</strong>
+                </div>
+            </div>
+
+            <div class="header-right">
+
+                <div class="academic-year">
+                    <i class="icon icon-calendar"></i>
+                    <span>Academic Year 2026–27</span>
+                </div>
+
+                <a href="notifications.html" class="header-notification">
+                    <i class="icon icon-bell"></i>
+                    <span class="notification-dot"></span>
+                </a>
+
+                <a href="profile.html" class="header-profile">
+                    <div class="header-avatar">RK</div>
+                    <div class="header-profile-info">
+                        <strong>Prof. Rahul Kulkarni</strong>
+                        <span>Faculty</span>
+                    </div>
+                    <i class="icon icon-chevron-down"></i>
+                </a>
+
+            </div>
+
+        </header>
+
+        <!-- DASHBOARD CONTENT -->
+
+        <div class="dashboard-content">
+
+            <!-- WELCOME SECTION -->
+
+            <section class="welcome-section">
+
+                <div class="welcome-text">
+                    <div class="welcome-badge">
+                        <span class="badge-dot"></span>
+                        FACULTY DASHBOARD
+                    </div>
+
+                    <h1>Good Morning, Prof. Rahul! <span>👋</span></h1>
+
+                    <p>
+                        Here's what's happening with your classes today.
+                        Monitor attendance, manage sessions, and stay organized.
+                    </p>
+                </div>
+
+                <div class="welcome-actions">
+
+                    <a href="sessions.html" class="btn btn-primary">
+                        <i class="icon icon-plus"></i>
+                        Create Session
+                    </a>
+
+                    <a href="reports.html" class="btn btn-secondary">
+                        <i class="icon icon-download"></i>
+                        View Reports
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- STATISTICS CARDS -->
+
+            <section class="statistics-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon blue">
+                            <i class="icon icon-users"></i>
+                        </div>
+                        <span class="stat-tag">Assigned</span>
+                    </div>
+
+                    <div class="stat-details">
+                        <h3>248</h3>
+                        <p>Total Students</p>
+                    </div>
+
+                    <div class="stat-footer">
+                        <i class="icon icon-graduation-cap"></i>
+                        Across 4 divisions
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon purple">
+                            <i class="icon icon-book-open"></i>
+                        </div>
+                        <span class="stat-tag">Today</span>
+                    </div>
+
+                    <div class="stat-details">
+                        <h3>06</h3>
+                        <p>Scheduled Lectures</p>
+                    </div>
+
+                    <div class="stat-footer">
+                        <i class="icon icon-check-circle"></i>
+                        3 lectures completed
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon green">
+                            <i class="icon icon-chart-no-axes-combined"></i>
+                        </div>
+                        <span class="stat-tag positive">
+                            <i class="icon icon-trending-up"></i>
+                            +2.4%
+                        </span>
+                    </div>
+
+                    <div class="stat-details">
+                        <h3>84.6%</h3>
+                        <p>Average Attendance</p>
+                    </div>
+
+                    <div class="stat-footer">
+                        <i class="icon icon-calendar-check"></i>
+                        Current semester
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon orange">
+                            <i class="icon icon-alert-triangle"></i>
+                        </div>
+                        <span class="stat-tag warning">Needs Attention</span>
+                    </div>
+
+                    <div class="stat-details">
+                        <h3>18</h3>
+                        <p>Low Attendance Students</p>
+                    </div>
+
+                    <div class="stat-footer">
+                        <i class="icon icon-info"></i>
+                        Below 75% attendance
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- ACTIVE SESSION -->
+
+            <section class="active-session-section">
+
+                <div class="active-session-content">
+
+                    <div class="active-session-left">
+
+                        <div class="active-session-heading">
+                            <span class="live-indicator"></span>
+                            <span>LIVE ATTENDANCE SESSION</span>
+                        </div>
+
+                        <h2>Database Management Systems</h2>
+
+                        <p>
+                            <i class="icon icon-users"></i>
+                            TY CSE - Division A
+
+                            <span class="session-divider"></span>
+
+                            <i class="icon icon-clock"></i>
+                            10:00 AM - 11:00 AM
+                        </p>
+
+                    </div>
+
+                    <div class="active-session-stats">
+
+                        <div class="session-stat">
+                            <strong>52<span>/60</span></strong>
+                            <p>Students Present</p>
+                        </div>
+
+                        <div class="session-stat">
+                            <strong>08:42</strong>
+                            <p>Time Remaining</p>
+                        </div>
+
+                    </div>
+
+                    <a href="sessions.html" class="session-action">
+                        Manage Session
+                        <i class="icon icon-arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="session-progress">
+                    <div class="session-progress-bar"></div>
+                </div>
+
+            </section>
+
+            <!-- MAIN DASHBOARD GRID -->
+
+            <div class="dashboard-grid">
+
+                <!-- LEFT COLUMN -->
+
+                <div class="dashboard-left-column">
+
+                    <!-- TODAY'S LECTURES -->
+
+                    <section class="dashboard-card schedule-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Today's Schedule</h2>
+                                <p>Your scheduled lectures for today</p>
+                            </div>
+
+                            <a href="timetable.html" class="text-link">
+                                View Timetable
+                                <i class="icon icon-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="schedule-list">
+
+                            <div class="schedule-item completed">
+
+                                <div class="schedule-time">
+                                    <strong>09:00</strong>
+                                    <span>10:00 AM</span>
+                                </div>
+
+                                <div class="schedule-indicator"></div>
+
+                                <div class="schedule-info">
+                                    <h3>Python Programming</h3>
+                                    <p>SY CSE - Division A • Room 204</p>
+                                </div>
+
+                                <span class="status-badge completed-badge">
+                                    Completed
+                                </span>
+
+                            </div>
+
+                            <div class="schedule-item ongoing">
+
+                                <div class="schedule-time">
+                                    <strong>10:00</strong>
+                                    <span>11:00 AM</span>
+                                </div>
+
+                                <div class="schedule-indicator"></div>
+
+                                <div class="schedule-info">
+                                    <h3>Database Management Systems</h3>
+                                    <p>TY CSE - Division A • Room 302</p>
+                                </div>
+
+                                <span class="status-badge ongoing-badge">
+                                    Ongoing
+                                </span>
+
+                            </div>
+
+                            <div class="schedule-item">
+
+                                <div class="schedule-time">
+                                    <strong>11:15</strong>
+                                    <span>12:15 PM</span>
+                                </div>
+
+                                <div class="schedule-indicator"></div>
+
+                                <div class="schedule-info">
+                                    <h3>Data Structures & Algorithms</h3>
+                                    <p>SY CSE - Division B • Room 205</p>
+                                </div>
+
+                                <span class="status-badge upcoming-badge">
+                                    Upcoming
+                                </span>
+
+                            </div>
+
+                            <div class="schedule-item">
+
+                                <div class="schedule-time">
+                                    <strong>01:00</strong>
+                                    <span>02:00 PM</span>
+                                </div>
+
+                                <div class="schedule-indicator"></div>
+
+                                <div class="schedule-info">
+                                    <h3>Python Programming Lab</h3>
+                                    <p>SY CSE - Division A • Lab 03</p>
+                                </div>
+
+                                <span class="status-badge upcoming-badge">
+                                    Upcoming
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- ATTENDANCE OVERVIEW -->
+
+                    <section class="dashboard-card overview-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Attendance Overview</h2>
+                                <p>Weekly attendance performance</p>
+                            </div>
+
+                            <div class="chart-filter">
+                                <i class="icon icon-calendar-days"></i>
+                                This Week
+                                <i class="icon icon-chevron-down"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="chart-legend">
+                            <span>
+                                <i class="legend-dot present"></i>
+                                Present
+                            </span>
+
+                            <span>
+                                <i class="legend-dot absent"></i>
+                                Absent
+                            </span>
+                        </div>
+
+                        <div class="attendance-chart">
+
+                            <div class="chart-y-axis">
+                                <span>100%</span>
+                                <span>75%</span>
+                                <span>50%</span>
+                                <span>25%</span>
+                                <span>0%</span>
+                            </div>
+
+                            <div class="chart-bars">
+
+                                <div class="chart-column">
+                                    <div class="bar-track">
+                                        <div class="bar-present" style="height: 88%;"></div>
+                                    </div>
+                                    <span>Mon</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="bar-track">
+                                        <div class="bar-present" style="height: 82%;"></div>
+                                    </div>
+                                    <span>Tue</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="bar-track">
+                                        <div class="bar-present" style="height: 91%;"></div>
+                                    </div>
+                                    <span>Wed</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="bar-track">
+                                        <div class="bar-present" style="height: 76%;"></div>
+                                    </div>
+                                    <span>Thu</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="bar-track">
+                                        <div class="bar-present" style="height: 85%;"></div>
+                                    </div>
+                                    <span>Fri</span>
+                                </div>
+
+                                <div class="chart-column">
+                                    <div class="bar-track">
+                                        <div class="bar-present" style="height: 79%;"></div>
+                                    </div>
+                                    <span>Sat</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="overview-footer">
+
+                            <div>
+                                <span>Weekly Average</span>
+                                <strong>83.5%</strong>
+                            </div>
+
+                            <div>
+                                <span>Best Attendance</span>
+                                <strong>Wednesday</strong>
+                            </div>
+
+                            <div>
+                                <span>Lectures Conducted</span>
+                                <strong>24</strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- RECENT ATTENDANCE SESSIONS -->
+
+                    <section class="dashboard-card recent-sessions-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Recent Attendance Sessions</h2>
+                                <p>Latest completed attendance records</p>
+                            </div>
+
+                            <a href="records.html" class="text-link">
+                                View All
+                                <i class="icon icon-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="table-responsive">
+
+                            <table class="sessions-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>SUBJECT</th>
+                                        <th>CLASS</th>
+                                        <th>DATE</th>
+                                        <th>ATTENDANCE</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <strong>Python Programming</strong>
+                                        </td>
+                                        <td>SY CSE - A</td>
+                                        <td>16 Oct 2026</td>
+                                        <td>
+                                            <span class="attendance-percentage high">
+                                                91%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="status-badge completed-badge">
+                                                Completed
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <strong>Database Management</strong>
+                                        </td>
+                                        <td>TY CSE - A</td>
+                                        <td>15 Oct 2026</td>
+                                        <td>
+                                            <span class="attendance-percentage high">
+                                                86%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="status-badge completed-badge">
+                                                Completed
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <strong>Data Structures</strong>
+                                        </td>
+                                        <td>SY CSE - B</td>
+                                        <td>15 Oct 2026</td>
+                                        <td>
+                                            <span class="attendance-percentage medium">
+                                                74%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="status-badge completed-badge">
+                                                Completed
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <strong>Python Programming</strong>
+                                        </td>
+                                        <td>SY CSE - A</td>
+                                        <td>14 Oct 2026</td>
+                                        <td>
+                                            <span class="attendance-percentage high">
+                                                89%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="status-badge completed-badge">
+                                                Completed
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <!-- RIGHT COLUMN -->
+
+                <div class="dashboard-right-column">
+
+                    <!-- QUICK ACTIONS -->
+
+                    <section class="dashboard-card quick-actions-card">
+
+                        <div class="card-header">
+                            <div>
+                                <h2>Quick Actions</h2>
+                                <p>Frequently used tools</p>
+                            </div>
+                        </div>
+
+                        <div class="quick-actions-grid">
+
+                            <a href="sessions.html" class="quick-action-item">
+                                <div class="quick-icon blue">
+                                    <i class="icon icon-plus-circle"></i>
+                                </div>
+                                <span>New Session</span>
+                            </a>
+
+                            <a href="attendance.html" class="quick-action-item">
+                                <div class="quick-icon green">
+                                    <i class="icon icon-clipboard-check"></i>
+                                </div>
+                                <span>Mark Attendance</span>
+                            </a>
+
+                            <a href="students.html" class="quick-action-item">
+                                <div class="quick-icon purple">
+                                    <i class="icon icon-users"></i>
+                                </div>
+                                <span>View Students</span>
+                            </a>
+
+                            <a href="reports.html" class="quick-action-item">
+                                <div class="quick-icon orange">
+                                    <i class="icon icon-file-down"></i>
+                                </div>
+                                <span>Get Reports</span>
+                            </a>
+
+                        </div>
+
+                    </section>
+
+                    <!-- LOW ATTENDANCE ALERTS -->
+
+                    <section class="dashboard-card alerts-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Low Attendance Alerts</h2>
+                                <p>Students requiring attention</p>
+                            </div>
+
+                            <span class="alert-counter">18</span>
+
+                        </div>
+
+                        <div class="alert-list">
+
+                            <div class="alert-student">
+
+                                <div class="student-avatar avatar-red">
+                                    AS
+                                </div>
+
+                                <div class="alert-student-info">
+                                    <h4>Aditya Sharma</h4>
+                                    <p>SY CSE - A • Roll 12</p>
+                                </div>
+
+                                <span class="low-percentage critical">
+                                    58%
+                                </span>
+
+                            </div>
+
+                            <div class="alert-student">
+
+                                <div class="student-avatar avatar-orange">
+                                    SP
+                                </div>
+
+                                <div class="alert-student-info">
+                                    <h4>Sneha Patil</h4>
+                                    <p>SY CSE - B • Roll 24</p>
+                                </div>
+
+                                <span class="low-percentage">
+                                    64%
+                                </span>
+
+                            </div>
+
+                            <div class="alert-student">
+
+                                <div class="student-avatar avatar-purple">
+                                    RK
+                                </div>
+
+                                <div class="alert-student-info">
+                                    <h4>Rohan Kulkarni</h4>
+                                    <p>TY CSE - A • Roll 31</p>
+                                </div>
+
+                                <span class="low-percentage">
+                                    69%
+                                </span>
+
+                            </div>
+
+                            <div class="alert-student">
+
+                                <div class="student-avatar avatar-blue">
+                                    PM
+                                </div>
+
+                                <div class="alert-student-info">
+                                    <h4>Priya More</h4>
+                                    <p>SY CSE - A • Roll 08</p>
+                                </div>
+
+                                <span class="low-percentage">
+                                    72%
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a href="students.html" class="card-bottom-link">
+                            View All Students
+                            <i class="icon icon-arrow-right"></i>
+                        </a>
+
+                    </section>
+
+                    <!-- ATTENDANCE ACTIVITY CALENDAR -->
+
+                    <section class="dashboard-card activity-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Attendance Activity</h2>
+                                <p>Lecture activity this semester</p>
+                            </div>
+
+                            <i class="icon icon-calendar-days activity-header-icon"></i>
+
+                        </div>
+
+                        <div class="activity-summary">
+                            <strong>142</strong>
+                            <span>Sessions conducted this semester</span>
+                        </div>
+
+                        <div class="calendar-months">
+                            <span>Jul</span>
+                            <span>Aug</span>
+                            <span>Sep</span>
+                            <span>Oct</span>
+                        </div>
+
+                        <div class="github-calendar">
+
+                            <div class="calendar-days">
+                                <span>Mon</span>
+                                <span>Wed</span>
+                                <span>Fri</span>
+                            </div>
+
+                            <div class="calendar-heatmap">
+
+                                <!-- Each column represents a week -->
+                                <!-- Each square represents a day -->
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-1"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-1"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-0"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-2"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-1"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-0"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-1"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-1"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-0"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-1"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-0"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-1"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                                <div class="calendar-week">
+                                    <span class="level-0"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-4"></span>
+                                    <span class="level-2"></span>
+                                    <span class="level-3"></span>
+                                    <span class="level-1"></span>
+                                    <span class="level-0"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="calendar-legend">
+
+                            <span>Less</span>
+
+                            <div class="legend-box level-0"></div>
+                            <div class="legend-box level-1"></div>
+                            <div class="legend-box level-2"></div>
+                            <div class="legend-box level-3"></div>
+                            <div class="legend-box level-4"></div>
+
+                            <span>More</span>
+
+                        </div>
+
+                    </section>
+
+                    <!-- NOTIFICATIONS PREVIEW -->
+
+                    <section class="dashboard-card notification-preview-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>Recent Notifications</h2>
+                                <p>Latest updates and reminders</p>
+                            </div>
+
+                            <a href="notifications.html" class="text-link">
+                                View All
+                            </a>
+
+                        </div>
+
+                        <div class="notification-preview-list">
+
+                            <div class="notification-preview-item">
+
+                                <div class="notification-preview-icon orange">
+                                    <i class="icon icon-alert-circle"></i>
+                                </div>
+
+                                <div class="notification-preview-info">
+                                    <h4>Low Attendance Alert</h4>
+                                    <p>5 students dropped below 75% attendance.</p>
+                                    <span>2 hours ago</span>
+                                </div>
+
+                            </div>
+
+                            <div class="notification-preview-item">
+
+                                <div class="notification-preview-icon blue">
+                                    <i class="icon icon-calendar-check"></i>
+                                </div>
+
+                                <div class="notification-preview-info">
+                                    <h4>Session Completed</h4>
+                                    <p>Python Programming attendance saved.</p>
+                                    <span>Yesterday</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 AttendEase. College Attendance Management System.
+                </p>
+
+                <span>
+                    Faculty Portal • Version 1.0
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
