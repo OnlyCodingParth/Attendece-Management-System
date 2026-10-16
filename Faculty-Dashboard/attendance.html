@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mark Attendance | College Attendance Management System</title>
+  <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="brand">College Attendance<small>Management System</small></div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a>Students</a>
+        <a class="active" href="attendance.html">Attendance</a>
+        <a>Reports</a>
+        <a>Settings</a>
+      </nav>
+      <a class="logout-link" href="login.html">Logout</a>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <div>
+          <h1>Mark Attendance</h1>
+          <p class="welcome">Select class details and mark attendance for students.</p>
+        </div>
+        <div class="profile">Mr. Rahul Patil Sir</div>
+      </header>
+      <section class="section">
+        <div class="filter-row">
+          <div>
+            <label class="field-label" for="attendance-date">Date</label>
+            <input id="attendance-date" type="date" value="2026-09-02">
+          </div>
+          <div>
+            <label class="field-label" for="class">Department / Class</label>
+            <select id="class">
+              <option>SY CSE Div B</option>
+              <option>SY CSE Div A</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label" for="subject">Subject</label>
+            <select id="subject">
+              <option>DSA</option>
+              <option>Mathematics </option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Roll No</th>
+                <th>Student Name</th>
+                <th>Mark Present Only</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Rehan Mujawar</td>
+                <td>
+                  <input type="checkbox" name="attendance_01" value="Present">
+                </td>
+                <td><span class="status">Present</span></td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>Parth Gavali</td>
+                <td>
+                  <input type="checkbox" name="attendance_2" value="Present">
+                </td>
+                <td><span class="status">Present</span></td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Soham Patil</td>
+                <td>
+                  <input type="checkbox" name="attendance_3" value="Present">
+                </td>
+                <td><span class="status">Absent</span></td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Yash Sharma</td>
+                <td>
+                  <input type="checkbox" name="attendance_4" value="Present">
+                </td>
+                <td><span class="status">Present</span></td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td>Shreyash Patil</td>
+                <td>
+                  <input type="checkbox" name="attendance_5" value="Present">
+                </td>
+                <td><span class="status">Present</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="button-row">
+          <button class="button secondary" type="button">Mark All Present</button>
+          <button class="button" type="button">Save Attendance</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

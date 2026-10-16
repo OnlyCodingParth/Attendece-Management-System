@@ -1,0 +1,198 @@
+ * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      background: #f1f4f8;
+      color: #29394d;
+      font-family: Arial, sans-serif;
+    }
+    
+    .app-layout {
+      min-height: 100vh;
+      display: flex;
+    }
+    
+    .sidebar {
+      width: 230px;
+      flex-shrink: 0;
+      padding: 24px 14px;
+      background: #244d7c;
+      color: white;
+    }
+    
+    .brand {
+      padding: 0 10px 23px;
+      border-bottom: 1px solid #51759e;
+      font-size: 17px;
+      font-weight: bold;
+      line-height: 1.35;
+    }
+    
+    .brand small {
+      display: block;
+      margin-top: 5px;
+      color: #cbdced;
+      font-size: 12px;
+      font-weight: normal;
+    }
+    
+    .nav-links {
+      margin-top: 22px;
+    }
+    
+    .nav-links a,
+    .logout-link {
+      display: block;
+      margin: 5px 0;
+      padding: 11px 12px;
+      border-radius: 4px;
+      color: #e9f1f9;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active,
+    .logout-link:hover {
+      background: #396794;
+    }
+    
+    .logout-link {
+      margin-top: 38px;
+      border-top: 1px solid #51759e;
+      border-radius: 0;
+      padding-top: 19px;
+    }
+    
+    .main-content {
+      width: 100%;
+      padding: 26px;
+      overflow: hidden;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    
+    h1 {
+      margin: 0;
+      color: #1f4168;
+      font-size: 25px;
+    }
+    
+    .welcome {
+      margin: 6px 0 0;
+      color: #6d7b8b;
+      font-size: 14px;
+    }
+    
+    .profile {
+      padding: 9px 12px;
+      border: 1px solid #d7e0e9;
+      border-radius: 4px;
+      background: white;
+      color: #496177;
+      font-size: 13px;
+    }
+    
+    .section {
+      padding: 20px;
+      border: 1px solid #dce4ed;
+      border-radius: 6px;
+      background: white;
+    }
+    
+    .filter-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    
+    .field-label {
+      display: block;
+      margin-bottom: 7px;
+      color: #52677c;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    
+    input:not([type="checkbox"]),
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #c8d2df;
+      border-radius: 4px;
+      background: white;
+      color: #394d60;
+      font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    
+    .table-wrapper {
+      margin-top: 20px;
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+      min-width: 580px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    
+    th,
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #e0e7ee;
+      text-align: left;
+    }
+    
+    th {
+      background: #f5f7fa;
+      color: #50657a;
+      font-size: 13px;
+    }
+    
+    .status {
+      padding: 4px 8px;
+      border-radius: 12px;
+      background: #e3f3e8;
+      color: #287143;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    .button-row {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .button {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 4px;
+      background: #2d5b92;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+    .button.secondary {
+      background: #66809a;
+    }
+    
+    .button:hover {
+      background: #234a77;
+    }
