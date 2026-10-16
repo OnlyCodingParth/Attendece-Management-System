@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | College Attendance</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>College Attendance</h2>
+            <p>Management System</p>
+        </div>
+
+        <nav class="nav">
+
+            <a href="01_student_dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="02_student_attendance.html">
+                My Attendance
+            </a>
+
+            <a href="03_student_reports.html">
+                Attendance Reports
+            </a>
+
+            <a href="04_student_defaulter.html">
+                Defaulter Status
+            </a>
+
+            <a href="05_student_profile.html">
+                My Profile
+            </a>
+
+            <a href="06_student_correction_requests.html">
+                Correction Requests
+            </a>
+
+            <div class="logout">
+                <a href="#" id="logoutLink">Logout</a>
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>
+                    Welcome back,
+                    <span id="welcomeName">Student</span>.
+                    Here is your attendance overview.
+                </p>
+            </div>
+
+            <div class="user-badge" id="userBadge">
+                Student
+            </div>
+
+        </div>
+
+        <!-- WELCOME CARD -->
+
+        <section class="welcome-card">
+
+            <div>
+                <h2 id="studentFullName">Student Name</h2>
+
+                <p>
+                    Roll Number:
+                    <span id="rollNumber">-</span>
+                    <br>
+
+                    Class:
+                    <span id="studentClass">-</span>
+                    <br>
+
+                    Department:
+                    <span id="department">-</span>
+                </p>
+            </div>
+
+            <div class="student-avatar" id="studentAvatar">
+                ST
+            </div>
+
+        </section>
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Working Days</p>
+                <h2 id="totalDays">100</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Present Days</p>
+                <h2 class="green" id="presentDays">85</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Absent Days</p>
+                <h2 class="red" id="absentDays">15</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Attendance Percentage</p>
+                <h2 id="attendancePercentage">85%</h2>
+            </div>
+
+        </section>
+
+        <!-- ATTENDANCE OVERVIEW -->
+
+        <section class="card">
+
+            <h2>Attendance Overview</h2>
+
+            <div class="progress-info">
+                <span>Overall Attendance</span>
+                <strong id="progressPercentage">85%</strong>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <p class="progress-note">
+                Minimum required attendance: 75%
+            </p>
+
+        </section>
+
+        <!-- RECENT ATTENDANCE -->
+
+        <section class="card">
+
+            <h2>Recent Attendance</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Day</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recentAttendanceBody">
+
+                        <tr>
+                            <td>15 Oct 2026</td>
+                            <td>Thursday</td>
+                            <td>
+                                <span class="badge badge-present">
+                                    Present
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>14 Oct 2026</td>
+                            <td>Wednesday</td>
+                            <td>
+                                <span class="badge badge-present">
+                                    Present
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>13 Oct 2026</td>
+                            <td>Tuesday</td>
+                            <td>
+                                <span class="badge badge-absent">
+                                    Absent
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>12 Oct 2026</td>
+                            <td>Monday</td>
+                            <td>
+                                <span class="badge badge-present">
+                                    Present
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>10 Oct 2026</td>
+                            <td>Saturday</td>
+                            <td>
+                                <span class="badge badge-present">
+                                    Present
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- DEFAULTER STATUS OVERVIEW -->
+
+        <section class="card">
+
+            <h2>Attendance Status</h2>
+
+            <div class="status-box" id="statusBox">
+
+                <h3 id="statusTitle">
+                    You Are Not in the Defaulter List
+                </h3>
+
+                <p id="statusMessage">
+                    Your attendance meets the minimum requirement.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK LINKS -->
+
+        <section class="card">
+
+            <h2>Quick Access</h2>
+
+            <div class="quick-links">
+
+                <a href="02_student_attendance.html" class="quick-link">
+                    <h3>My Attendance →</h3>
+                    <p>View your GitHub-style attendance calendar.</p>
+                </a>
+
+                <a href="03_student_reports.html" class="quick-link">
+                    <h3>Attendance Reports →</h3>
+                    <p>View monthly and semester attendance reports.</p>
+                </a>
+
+                <a href="04_student_defaulter.html" class="quick-link">
+                    <h3>Defaulter Status →</h3>
+                    <p>Check your attendance eligibility and shortage.</p>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        /*
+         * DEMO STUDENT DATA
+         *
+         * Replace this with authenticated
+         * student information from the backend.
+         */
+
+        const student = {
+            name: "Parth Sambhaji Gavali",
+            rollNumber: "42",
+            studentClass: "SY CSE - Division A",
+            department: "Computer Science & Engineering"
+        };
+
+        /*
+         * DEMO ATTENDANCE DATA
+         */
+
+        const attendance = {
+            present: 85,
+            absent: 15
+        };
+
+        function initializeDashboard() {
+
+            const total = attendance.present + attendance.absent;
+
+            const percentage = total > 0
+                ? (attendance.present / total) * 100
+                : 0;
+
+            const formattedPercentage = percentage.toFixed(2) + "%";
+
+            // Student information
+
+            document.getElementById("welcomeName").textContent =
+                student.name.split(" ")[0];
+
+            document.getElementById("userBadge").textContent =
+                student.name;
+
+            document.getElementById("studentFullName").textContent =
+                student.name;
+
+            document.getElementById("rollNumber").textContent =
+                student.rollNumber;
+
+            document.getElementById("studentClass").textContent =
+                student.studentClass;
+
+            document.getElementById("department").textContent =
+                student.department;
+
+            // Avatar initials
+
+            const initials = student.name
+                .split(" ")
+                .slice(0, 2)
+                .map(word => word.charAt(0))
+                .join("");
+
+            document.getElementById("studentAvatar").textContent =
+                initials;
+
+            // Statistics
+
+            document.getElementById("totalDays").textContent =
+                total;
+
+            document.getElementById("presentDays").textContent =
+                attendance.present;
+
+            document.getElementById("absentDays").textContent =
+                attendance.absent;
+
+            document.getElementById("attendancePercentage").textContent =
+                formattedPercentage;
+
+            document.getElementById("progressPercentage").textContent =
+                formattedPercentage;
+
+            // Progress bar
+
+            const progressFill =
+                document.getElementById("progressFill");
+
+            progressFill.style.width = percentage + "%";
+
+            progressFill.style.background =
+                percentage >= 75 ? "#519b6d" : "#d76565";
+
+            // Defaulter status
+
+            const statusBox =
+                document.getElementById("statusBox");
+
+            const statusTitle =
+                document.getElementById("statusTitle");
+
+            const statusMessage =
+                document.getElementById("statusMessage");
+
+            if (total === 0) {
+
+                statusTitle.textContent =
+                    "Attendance Not Available";
+
+                statusMessage.textContent =
+                    "Your attendance has not been recorded yet.";
+
+            } else if (percentage < 75) {
+
+                statusBox.classList.add("defaulter");
+
+                statusTitle.textContent =
+                    "You Are in the Defaulter List";
+
+                statusMessage.textContent =
+                    `Your attendance is ${formattedPercentage}.
+                     The minimum required attendance is 75%.
+                     Please attend your upcoming lectures regularly.`;
+
+            } else {
+
+                statusTitle.textContent =
+                    "You Are Not in the Defaulter List";
+
+                statusMessage.textContent =
+                    `Your current attendance is ${formattedPercentage}.
+                     You meet the minimum attendance requirement of 75%.`;
+
+            }
+        }
+
+        /*
+         * LOGOUT
+         *
+         * Connect this button to the backend
+         * session logout endpoint.
+         */
+
+        document.getElementById("logoutLink")
+            .addEventListener("click", function (event) {
+
+                event.preventDefault();
+
+                alert("Logout will be connected to the backend.");
+
+            });
+
+        initializeDashboard();
+
+    </script>
+
+</body>
+</html>

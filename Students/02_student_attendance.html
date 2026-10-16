@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Attendance | College Attendance</title>
+
+    <link rel="stylesheet" href="02_student_attendance.css">
+    <script src="02_student_attendance.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>College Attendance</h2>
+            <p>Management System</p>
+        </div>
+
+        <nav class="nav">
+
+            <a href="01_student_dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="02_student_attendance.html" class="active">
+                My Attendance
+            </a>
+
+            <a href="03_student_reports.html">
+                Attendance Reports
+            </a>
+
+            <a href="04_student_defaulter.html">
+                Defaulter Status
+            </a>
+
+            <a href="05_student_profile.html">
+                My Profile
+            </a>
+
+            <a href="06_student_correction_requests.html">
+                Correction Requests
+            </a>
+
+            <div class="logout">
+                <a href="#" id="logoutLink">Logout</a>
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="main">
+
+        <!-- PAGE HEADER -->
+
+        <header class="header">
+
+            <div>
+                <h1>My Attendance</h1>
+
+                <p>
+                    Track your daily attendance throughout the academic year.
+                </p>
+            </div>
+
+            <div class="user-badge" id="userBadge">
+                Student
+            </div>
+
+        </header>
+
+        <!-- STUDENT DETAILS -->
+
+        <section class="card student-details">
+
+            <div>
+                <h2 id="studentName">Student Name</h2>
+
+                <p>
+                    Roll Number:
+                    <strong id="rollNumber">-</strong>
+                </p>
+
+                <p>
+                    Class:
+                    <strong id="studentClass">-</strong>
+                </p>
+            </div>
+
+            <div class="academic-badge">
+                Academic Attendance Record
+            </div>
+
+        </section>
+
+        <!-- ATTENDANCE SUMMARY -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Working Days</p>
+                <h2 id="totalDays">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Present Days</p>
+                <h2 class="green-text" id="presentDays">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Absent Days</p>
+                <h2 class="red-text" id="absentDays">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Attendance Percentage</p>
+                <h2 id="attendancePercentage">0%</h2>
+            </div>
+
+        </section>
+
+        <!-- GITHUB STYLE CALENDAR -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Attendance Calendar</h2>
+
+                    <p>
+                        Your complete attendance history in a
+                        GitHub-style calendar.
+                    </p>
+                </div>
+
+                <div class="calendar-filter">
+
+                    <label for="yearSelect">Year</label>
+
+                    <select id="yearSelect">
+                        <option value="2026">2026</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- CALENDAR -->
+
+            <div class="calendar-scroll">
+
+                <div class="calendar-layout">
+
+                    <!-- WEEKDAY LABELS -->
+
+                    <div class="weekday-labels">
+
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+
+                    </div>
+
+                    <div class="calendar-content">
+
+                        <div class="month-labels" id="monthLabels"></div>
+
+                        <div class="calendar-grid" id="calendarGrid"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CALENDAR LEGEND -->
+
+            <div class="calendar-legend">
+
+                <div class="legend-item">
+                    <span class="legend-box present"></span>
+                    Present
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-box absent"></span>
+                    Absent
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-box holiday"></span>
+                    Holiday
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-box no-record"></span>
+                    Not Marked
+                </div>
+
+            </div>
+
+            <p class="calendar-note">
+                Hover over or select a date to view its attendance details.
+            </p>
+
+        </section>
+
+        <!-- SELECTED DATE DETAILS -->
+
+        <section class="card">
+
+            <h2>Daily Attendance Details</h2>
+
+            <div class="date-details">
+
+                <div class="detail-item">
+                    <label>Selected Date</label>
+                    <strong id="selectedDate">Select a date</strong>
+                </div>
+
+                <div class="detail-item">
+                    <label>Day</label>
+                    <strong id="selectedDay">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <label>Attendance Status</label>
+                    <span id="selectedStatus" class="status-badge">
+                        Not Selected
+                    </span>
+                </div>
+
+                <div class="detail-item">
+                    <label>Additional Information</label>
+                    <strong id="selectedInfo">-</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MONTHLY ATTENDANCE SUMMARY -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Monthly Attendance Summary</h2>
+
+                    <p>
+                        View your attendance statistics for each month.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Working Days</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Attendance %</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="monthlyTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
