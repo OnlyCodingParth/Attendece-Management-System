@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Correction Requests | College Attendance</title>
+
+    <link rel="stylesheet" href="06_student_correction_requests.css">
+</head>
+
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>College Attendance</h2>
+            <p>Management System</p>
+        </div>
+
+        <nav class="nav">
+
+            <a href="01_student_dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="02_student_attendance.html">
+                My Attendance
+            </a>
+
+            <a href="03_student_reports.html">
+                Attendance Reports
+            </a>
+
+            <a href="04_student_defaulter.html">
+                Defaulter Status
+            </a>
+
+            <a href="05_student_profile.html">
+                My Profile
+            </a>
+
+            <a href="06_student_correction_requests.html" class="active">
+                Correction Requests
+            </a>
+
+            <div class="logout">
+                <a href="#">Logout</a>
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="main">
+
+        <!-- PAGE HEADER -->
+
+        <header class="header">
+
+            <div>
+                <h1>Attendance Correction Requests</h1>
+
+                <p>
+                    Submit and track requests for incorrectly
+                    marked attendance.
+                </p>
+            </div>
+
+            <div class="user-badge">
+                Parth Gavali
+            </div>
+
+        </header>
+
+        <!-- ========== STUDENT INFORMATION ========== -->
+
+        <section class="card student-info">
+
+            <div>
+                <h2>Student Information</h2>
+
+                <p>
+                    Student Name:
+                    <strong>Parth Sambhaji Gavali</strong>
+                </p>
+
+                <p>
+                    Roll Number:
+                    <strong>42</strong>
+                </p>
+
+                <p>
+                    Class:
+                    <strong>SY CSE - Division A</strong>
+                </p>
+            </div>
+
+            <div class="academic-badge">
+                Academic Year 2026 - 2027
+            </div>
+
+        </section>
+
+        <!-- ========== REQUEST STATISTICS ========== -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <p>Total Requests</p>
+
+                <h2>8</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <p>Pending Requests</p>
+
+                <h2 class="yellow-text">2</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <p>Approved Requests</p>
+
+                <h2 class="green-text">5</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <p>Rejected Requests</p>
+
+                <h2 class="red-text">1</h2>
+
+            </div>
+
+        </section>
+
+        <!-- ========== CORRECTION REQUEST FORM ========== -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Submit Attendance Correction Request</h2>
+
+                    <p>
+                        Fill in the details below to request
+                        an attendance correction.
+                    </p>
+                </div>
+
+                <span class="form-badge">
+                    New Request
+                </span>
+
+            </div>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <div class="form-grid">
+
+                    <!-- ATTENDANCE DATE -->
+
+                    <div class="form-group">
+
+                        <label for="attendanceDate">
+                            Attendance Date
+                            <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="attendanceDate"
+                            name="attendance_date"
+                            required
+                        >
+
+                        <small>
+                            Select the date for which attendance
+                            was marked incorrectly.
+                        </small>
+
+                    </div>
+
+                    <!-- CURRENT STATUS -->
+
+                    <div class="form-group">
+
+                        <label for="currentStatus">
+                            Current Attendance Status
+                            <span class="required">*</span>
+                        </label>
+
+                        <select
+                            id="currentStatus"
+                            name="current_status"
+                            required
+                        >
+
+                            <option value="" selected disabled>
+                                Select Current Status
+                            </option>
+
+                            <option value="absent">
+                                Absent
+                            </option>
+
+                            <option value="present">
+                                Present
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- REQUESTED STATUS -->
+
+                    <div class="form-group">
+
+                        <label for="requestedStatus">
+                            Requested Attendance Status
+                            <span class="required">*</span>
+                        </label>
+
+                        <select
+                            id="requestedStatus"
+                            name="requested_status"
+                            required
+                        >
+
+                            <option value="" selected disabled>
+                                Select Requested Status
+                            </option>
+
+                            <option value="present">
+                                Present
+                            </option>
+
+                            <option value="absent">
+                                Absent
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- REQUEST CATEGORY -->
+
+                    <div class="form-group">
+
+                        <label for="requestCategory">
+                            Correction Category
+                            <span class="required">*</span>
+                        </label>
+
+                        <select
+                            id="requestCategory"
+                            name="request_category"
+                            required
+                        >
+
+                            <option value="" selected disabled>
+                                Select Correction Category
+                            </option>
+
+                            <option value="incorrectly_marked">
+                                Incorrectly Marked Attendance
+                            </option>
+
+                            <option value="attendance_not_updated">
+                                Attendance Not Updated
+                            </option>
+
+                            <option value="technical_error">
+                                Technical Error
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- CORRECTION REASON -->
+
+                    <div class="form-group full-width">
+
+                        <label for="correctionReason">
+                            Reason for Correction
+                            <span class="required">*</span>
+                        </label>
+
+                        <textarea
+                            id="correctionReason"
+                            name="correction_reason"
+                            rows="5"
+                            placeholder="Explain why your attendance should be corrected..."
+                            minlength="10"
+                            maxlength="500"
+                            required
+                        ></textarea>
+
+                        <small>
+                            Provide a clear explanation of the
+                            attendance issue (10–500 characters).
+                        </small>
+
+                    </div>
+
+                    <!-- SUPPORTING DOCUMENT -->
+
+                    <div class="form-group full-width">
+
+                        <label for="supportingDocument">
+                            Supporting Document (Optional)
+                        </label>
+
+                        <div class="upload-box">
+
+                            <input
+                                type="file"
+                                id="supportingDocument"
+                                name="supporting_document"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            >
+
+                            <p>
+                                Upload a supporting document,
+                                if available.
+                            </p>
+
+                            <small>
+                                Accepted formats: PDF, JPG, JPEG, PNG
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- FORM NOTICE -->
+
+                <div class="form-notice">
+
+                    <strong>Important:</strong>
+
+                    Your correction request will be reviewed by
+                    your teacher or an authorized administrator.
+                    Submitting a request does not automatically
+                    change your attendance.
+
+                </div>
+
+                <!-- FORM BUTTONS -->
+
+                <div class="form-actions">
+
+                    <button type="reset" class="btn btn-secondary">
+                        Clear Form
+                    </button>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit Correction Request
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- ========== REQUEST HISTORY ========== -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Correction Request History</h2>
+
+                    <p>
+                        Track your previously submitted attendance
+                        correction requests.
+                    </p>
+                </div>
+
+                <span class="history-count">
+                    8 Total Requests
+                </span>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Attendance Date</th>
+                            <th>Current Status</th>
+                            <th>Requested Status</th>
+                            <th>Submitted On</th>
+                            <th>Request Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>#CR008</td>
+                            <td>14 Oct 2026</td>
+
+                            <td>
+                                <span class="attendance-badge absent">
+                                    Absent
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="attendance-badge present">
+                                    Present
+                                </span>
+                            </td>
+
+                            <td>15 Oct 2026</td>
+
+                            <td>
+                                <span class="status-badge pending">
+                                    Pending
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#CR007</td>
+                            <td>10 Oct 2026</td>
+
+                            <td>
+                                <span class="attendance-badge absent">
+                                    Absent
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="attendance-badge present">
+                                    Present
+                                </span>
+                            </td>
+
+                            <td>11 Oct 2026</td>
+
+                            <td>
+                                <span class="status-badge approved">
+                                    Approved
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#CR006</td>
+                            <td>07 Oct 2026</td>
+
+                            <td>
+                                <span class="attendance-badge absent">
+                                    Absent
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="attendance-badge present">
+                                    Present
+                                </span>
+                            </td>
+
+                            <td>08 Oct 2026</td>
+
+                            <td>
+                                <span class="status-badge rejected">
+                                    Rejected
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#CR005</td>
+                            <td>03 Oct 2026</td>
+
+                            <td>
+                                <span class="attendance-badge absent">
+                                    Absent
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="attendance-badge present">
+                                    Present
+                                </span>
+                            </td>
+
+                            <td>04 Oct 2026</td>
+
+                            <td>
+                                <span class="status-badge approved">
+                                    Approved
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#CR004</td>
+                            <td>29 Sep 2026</td>
+
+                            <td>
+                                <span class="attendance-badge absent">
+                                    Absent
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="attendance-badge present">
+                                    Present
+                                </span>
+                            </td>
+
+                            <td>30 Sep 2026</td>
+
+                            <td>
+                                <span class="status-badge pending">
+                                    Pending
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="table-note">
+                Showing 5 of 8 demonstration requests.
+            </p>
+
+        </section>
+
+        <!-- ========== TEACHER REMARKS ========== -->
+
+        <section class="card">
+
+            <h2>Teacher Remarks & Request Updates</h2>
+
+            <div class="remarks-list">
+
+                <!-- APPROVED -->
+
+                <div class="remark-item">
+
+                    <div class="remark-header">
+
+                        <div>
+                            <h3>Request #CR007</h3>
+
+                            <p>Attendance Date: 10 Oct 2026</p>
+                        </div>
+
+                        <span class="status-badge approved">
+                            Approved
+                        </span>
+
+                    </div>
+
+                    <div class="remark-message">
+
+                        <strong>Teacher Remark:</strong>
+
+                        <p>
+                            Attendance record verified.
+                            The correction request has been approved.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- REJECTED -->
+
+                <div class="remark-item">
+
+                    <div class="remark-header">
+
+                        <div>
+                            <h3>Request #CR006</h3>
+
+                            <p>Attendance Date: 07 Oct 2026</p>
+                        </div>
+
+                        <span class="status-badge rejected">
+                            Rejected
+                        </span>
+
+                    </div>
+
+                    <div class="remark-message">
+
+                        <strong>Teacher Remark:</strong>
+
+                        <p>
+                            Attendance records were reviewed.
+                            The correction request could not be approved.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- PENDING -->
+
+                <div class="remark-item">
+
+                    <div class="remark-header">
+
+                        <div>
+                            <h3>Request #CR008</h3>
+
+                            <p>Attendance Date: 14 Oct 2026</p>
+                        </div>
+
+                        <span class="status-badge pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+                    <div class="remark-message">
+
+                        <strong>Request Update:</strong>
+
+                        <p>
+                            Your request has been submitted and is
+                            awaiting teacher review.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========== CORRECTION GUIDELINES ========== -->
+
+        <section class="card">
+
+            <h2>Correction Request Guidelines</h2>
+
+            <div class="guidelines">
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">01</span>
+
+                    <div>
+                        <h3>Verify Your Attendance</h3>
+
+                        <p>
+                            Check your attendance calendar before
+                            submitting a correction request.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">02</span>
+
+                    <div>
+                        <h3>Provide Accurate Information</h3>
+
+                        <p>
+                            Select the correct attendance date
+                            and provide a valid reason for correction.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">03</span>
+
+                    <div>
+                        <h3>Wait for Teacher Approval</h3>
+
+                        <p>
+                            Your attendance will only be updated
+                            after the correction request is approved.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="guideline-item">
+
+                    <span class="guideline-number">04</span>
+
+                    <div>
+                        <h3>Track Your Request</h3>
+
+                        <p>
+                            Check the request history section
+                            to view approval status and teacher remarks.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

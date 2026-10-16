@@ -8,12 +8,11 @@
     <title>My Attendance | College Attendance</title>
 
     <link rel="stylesheet" href="02_student_attendance.css">
-    <script src="02_student_attendance.js" defer></script>
 </head>
 
 <body>
 
-    <!-- ========== SIDEBAR ========== -->
+    <!-- ================= SIDEBAR ================= -->
 
     <aside class="sidebar">
 
@@ -49,86 +48,85 @@
             </a>
 
             <div class="logout">
-                <a href="#" id="logoutLink">Logout</a>
+                <a href="#">Logout</a>
             </div>
 
         </nav>
 
     </aside>
 
-    <!-- ========== MAIN CONTENT ========== -->
+
+    <!-- ================= MAIN CONTENT ================= -->
 
     <main class="main">
 
-        <!-- PAGE HEADER -->
+        <!-- HEADER -->
 
         <header class="header">
 
             <div>
                 <h1>My Attendance</h1>
-
-                <p>
-                    Track your daily attendance throughout the academic year.
-                </p>
+                <p>Track your daily attendance throughout the academic year.</p>
             </div>
 
-            <div class="user-badge" id="userBadge">
-                Student
+            <div class="user-badge">
+                Student Portal
             </div>
 
         </header>
 
-        <!-- STUDENT DETAILS -->
+
+        <!-- ================= STUDENT DETAILS ================= -->
 
         <section class="card student-details">
 
             <div>
-                <h2 id="studentName">Student Name</h2>
+                <h2>Parth Sambhaji Gavali</h2>
 
                 <p>
-                    Roll Number:
-                    <strong id="rollNumber">-</strong>
+                    Roll Number: <strong>42</strong>
                 </p>
 
                 <p>
-                    Class:
-                    <strong id="studentClass">-</strong>
+                    Class: <strong>SY CSE - Division A</strong>
                 </p>
             </div>
 
             <div class="academic-badge">
-                Academic Attendance Record
+                Academic Year 2026 - 2027
             </div>
 
         </section>
 
-        <!-- ATTENDANCE SUMMARY -->
+
+        <!-- ================= ATTENDANCE STATISTICS ================= -->
 
         <section class="stats">
 
             <div class="stat-card">
                 <p>Total Working Days</p>
-                <h2 id="totalDays">0</h2>
+                <h2>100</h2>
             </div>
 
             <div class="stat-card">
                 <p>Present Days</p>
-                <h2 class="green-text" id="presentDays">0</h2>
+                <h2 class="green-text">85</h2>
             </div>
 
             <div class="stat-card">
                 <p>Absent Days</p>
-                <h2 class="red-text" id="absentDays">0</h2>
+                <h2 class="red-text">15</h2>
             </div>
 
             <div class="stat-card">
                 <p>Attendance Percentage</p>
-                <h2 id="attendancePercentage">0%</h2>
+                <h2>85%</h2>
             </div>
 
         </section>
 
-        <!-- GITHUB STYLE CALENDAR -->
+
+        <!-- ================= GITHUB ATTENDANCE CALENDAR ================= -->
 
         <section class="card">
 
@@ -143,19 +141,14 @@
                     </p>
                 </div>
 
-                <div class="calendar-filter">
-
-                    <label for="yearSelect">Year</label>
-
-                    <select id="yearSelect">
-                        <option value="2026">2026</option>
-                    </select>
-
+                <div class="year-badge">
+                    Year: 2026
                 </div>
 
             </div>
 
-            <!-- CALENDAR -->
+
+            <!-- CALENDAR CONTAINER -->
 
             <div class="calendar-scroll">
 
@@ -175,11 +168,850 @@
 
                     </div>
 
+
+                    <!-- CALENDAR CONTENT -->
+
                     <div class="calendar-content">
 
-                        <div class="month-labels" id="monthLabels"></div>
+                        <!-- MONTH LABELS -->
 
-                        <div class="calendar-grid" id="calendarGrid"></div>
+                        <div class="month-labels">
+
+                            <span style="left: 0px;">Jan</span>
+                            <span style="left: 100px;">Feb</span>
+                            <span style="left: 180px;">Mar</span>
+                            <span style="left: 260px;">Apr</span>
+                            <span style="left: 340px;">May</span>
+                            <span style="left: 440px;">Jun</span>
+                            <span style="left: 520px;">Jul</span>
+                            <span style="left: 600px;">Aug</span>
+                            <span style="left: 700px;">Sep</span>
+                            <span style="left: 780px;">Oct</span>
+                            <span style="left: 880px;">Nov</span>
+                            <span style="left: 960px;">Dec</span>
+
+                        </div>
+
+
+                        <!-- ATTENDANCE GRID -->
+
+                        <div class="calendar-grid">
+
+                            <!--
+                                Calendar starts on Sunday.
+
+                                P = Present
+                                A = Absent
+                                H = Holiday
+                                N = Not Marked
+
+                                All calendar squares below
+                                are actual HTML elements.
+                            -->
+
+
+                            <!-- WEEK 01: DEC 28 - JAN 03 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day outside-year"></span>
+                                <span class="calendar-day outside-year"></span>
+                                <span class="calendar-day outside-year"></span>
+                                <span class="calendar-day outside-year"></span>
+
+                                <span class="calendar-day present"
+                                      title="01 January 2026 - Present"></span>
+
+                                <span class="calendar-day present"
+                                      title="02 January 2026 - Present"></span>
+
+                                <span class="calendar-day present"
+                                      title="03 January 2026 - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 02: JAN 04 - JAN 10 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="04 Jan - Sunday"></span>
+                                <span class="calendar-day present" title="05 Jan - Present"></span>
+                                <span class="calendar-day present" title="06 Jan - Present"></span>
+                                <span class="calendar-day present" title="07 Jan - Present"></span>
+                                <span class="calendar-day absent" title="08 Jan - Absent"></span>
+                                <span class="calendar-day present" title="09 Jan - Present"></span>
+                                <span class="calendar-day present" title="10 Jan - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 03: JAN 11 - JAN 17 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="11 Jan - Sunday"></span>
+                                <span class="calendar-day present" title="12 Jan - Present"></span>
+                                <span class="calendar-day present" title="13 Jan - Present"></span>
+                                <span class="calendar-day absent" title="14 Jan - Absent"></span>
+                                <span class="calendar-day present" title="15 Jan - Present"></span>
+                                <span class="calendar-day present" title="16 Jan - Present"></span>
+                                <span class="calendar-day present" title="17 Jan - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 04: JAN 18 - JAN 24 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="18 Jan - Sunday"></span>
+                                <span class="calendar-day present" title="19 Jan - Present"></span>
+                                <span class="calendar-day present" title="20 Jan - Present"></span>
+                                <span class="calendar-day present" title="21 Jan - Present"></span>
+                                <span class="calendar-day present" title="22 Jan - Present"></span>
+                                <span class="calendar-day absent" title="23 Jan - Absent"></span>
+                                <span class="calendar-day present" title="24 Jan - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 05: JAN 25 - JAN 31 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="25 Jan - Sunday"></span>
+                                <span class="calendar-day holiday" title="26 Jan - Republic Day"></span>
+                                <span class="calendar-day present" title="27 Jan - Present"></span>
+                                <span class="calendar-day present" title="28 Jan - Present"></span>
+                                <span class="calendar-day present" title="29 Jan - Present"></span>
+                                <span class="calendar-day absent" title="30 Jan - Absent"></span>
+                                <span class="calendar-day present" title="31 Jan - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 06: FEB 01 - FEB 07 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="01 Feb - Sunday"></span>
+                                <span class="calendar-day present" title="02 Feb - Present"></span>
+                                <span class="calendar-day present" title="03 Feb - Present"></span>
+                                <span class="calendar-day present" title="04 Feb - Present"></span>
+                                <span class="calendar-day absent" title="05 Feb - Absent"></span>
+                                <span class="calendar-day present" title="06 Feb - Present"></span>
+                                <span class="calendar-day present" title="07 Feb - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 07: FEB 08 - FEB 14 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="08 Feb - Sunday"></span>
+                                <span class="calendar-day present" title="09 Feb - Present"></span>
+                                <span class="calendar-day present" title="10 Feb - Present"></span>
+                                <span class="calendar-day absent" title="11 Feb - Absent"></span>
+                                <span class="calendar-day present" title="12 Feb - Present"></span>
+                                <span class="calendar-day present" title="13 Feb - Present"></span>
+                                <span class="calendar-day present" title="14 Feb - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 08: FEB 15 - FEB 21 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="15 Feb - Sunday"></span>
+                                <span class="calendar-day present" title="16 Feb - Present"></span>
+                                <span class="calendar-day present" title="17 Feb - Present"></span>
+                                <span class="calendar-day present" title="18 Feb - Present"></span>
+                                <span class="calendar-day present" title="19 Feb - Present"></span>
+                                <span class="calendar-day absent" title="20 Feb - Absent"></span>
+                                <span class="calendar-day present" title="21 Feb - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 09: FEB 22 - FEB 28 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="22 Feb - Sunday"></span>
+                                <span class="calendar-day present" title="23 Feb - Present"></span>
+                                <span class="calendar-day present" title="24 Feb - Present"></span>
+                                <span class="calendar-day present" title="25 Feb - Present"></span>
+                                <span class="calendar-day present" title="26 Feb - Present"></span>
+                                <span class="calendar-day present" title="27 Feb - Present"></span>
+                                <span class="calendar-day absent" title="28 Feb - Absent"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 10: MAR 01 - MAR 07 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="01 Mar - Sunday"></span>
+                                <span class="calendar-day present" title="02 Mar - Present"></span>
+                                <span class="calendar-day absent" title="03 Mar - Absent"></span>
+                                <span class="calendar-day present" title="04 Mar - Present"></span>
+                                <span class="calendar-day present" title="05 Mar - Present"></span>
+                                <span class="calendar-day present" title="06 Mar - Present"></span>
+                                <span class="calendar-day present" title="07 Mar - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 11: MAR 08 - MAR 14 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="08 Mar - Sunday"></span>
+                                <span class="calendar-day present" title="09 Mar - Present"></span>
+                                <span class="calendar-day present" title="10 Mar - Present"></span>
+                                <span class="calendar-day present" title="11 Mar - Present"></span>
+                                <span class="calendar-day absent" title="12 Mar - Absent"></span>
+                                <span class="calendar-day present" title="13 Mar - Present"></span>
+                                <span class="calendar-day present" title="14 Mar - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 12: MAR 15 - MAR 21 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="15 Mar - Sunday"></span>
+                                <span class="calendar-day present" title="16 Mar - Present"></span>
+                                <span class="calendar-day present" title="17 Mar - Present"></span>
+                                <span class="calendar-day absent" title="18 Mar - Absent"></span>
+                                <span class="calendar-day present" title="19 Mar - Present"></span>
+                                <span class="calendar-day present" title="20 Mar - Present"></span>
+                                <span class="calendar-day present" title="21 Mar - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 13: MAR 22 - MAR 28 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="22 Mar - Sunday"></span>
+                                <span class="calendar-day present" title="23 Mar - Present"></span>
+                                <span class="calendar-day present" title="24 Mar - Present"></span>
+                                <span class="calendar-day present" title="25 Mar - Present"></span>
+                                <span class="calendar-day present" title="26 Mar - Present"></span>
+                                <span class="calendar-day absent" title="27 Mar - Absent"></span>
+                                <span class="calendar-day present" title="28 Mar - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 14: MAR 29 - APR 04 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="29 Mar - Sunday"></span>
+                                <span class="calendar-day present" title="30 Mar - Present"></span>
+                                <span class="calendar-day present" title="31 Mar - Present"></span>
+                                <span class="calendar-day present" title="01 Apr - Present"></span>
+                                <span class="calendar-day absent" title="02 Apr - Absent"></span>
+                                <span class="calendar-day present" title="03 Apr - Present"></span>
+                                <span class="calendar-day present" title="04 Apr - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 15: APR 05 - APR 11 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="05 Apr - Sunday"></span>
+                                <span class="calendar-day present" title="06 Apr - Present"></span>
+                                <span class="calendar-day present" title="07 Apr - Present"></span>
+                                <span class="calendar-day present" title="08 Apr - Present"></span>
+                                <span class="calendar-day present" title="09 Apr - Present"></span>
+                                <span class="calendar-day absent" title="10 Apr - Absent"></span>
+                                <span class="calendar-day present" title="11 Apr - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 16: APR 12 - APR 18 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="12 Apr - Sunday"></span>
+                                <span class="calendar-day present" title="13 Apr - Present"></span>
+                                <span class="calendar-day absent" title="14 Apr - Absent"></span>
+                                <span class="calendar-day present" title="15 Apr - Present"></span>
+                                <span class="calendar-day present" title="16 Apr - Present"></span>
+                                <span class="calendar-day present" title="17 Apr - Present"></span>
+                                <span class="calendar-day present" title="18 Apr - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 17: APR 19 - APR 25 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="19 Apr - Sunday"></span>
+                                <span class="calendar-day present" title="20 Apr - Present"></span>
+                                <span class="calendar-day present" title="21 Apr - Present"></span>
+                                <span class="calendar-day present" title="22 Apr - Present"></span>
+                                <span class="calendar-day absent" title="23 Apr - Absent"></span>
+                                <span class="calendar-day present" title="24 Apr - Present"></span>
+                                <span class="calendar-day present" title="25 Apr - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 18: APR 26 - MAY 02 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="26 Apr - Sunday"></span>
+                                <span class="calendar-day present" title="27 Apr - Present"></span>
+                                <span class="calendar-day present" title="28 Apr - Present"></span>
+                                <span class="calendar-day absent" title="29 Apr - Absent"></span>
+                                <span class="calendar-day present" title="30 Apr - Present"></span>
+                                <span class="calendar-day holiday" title="01 May - Maharashtra Day"></span>
+                                <span class="calendar-day present" title="02 May - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 19: MAY 03 - MAY 09 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="03 May - Sunday"></span>
+                                <span class="calendar-day present" title="04 May - Present"></span>
+                                <span class="calendar-day present" title="05 May - Present"></span>
+                                <span class="calendar-day present" title="06 May - Present"></span>
+                                <span class="calendar-day absent" title="07 May - Absent"></span>
+                                <span class="calendar-day present" title="08 May - Present"></span>
+                                <span class="calendar-day present" title="09 May - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 20: MAY 10 - MAY 16 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="10 May - Sunday"></span>
+                                <span class="calendar-day present" title="11 May - Present"></span>
+                                <span class="calendar-day present" title="12 May - Present"></span>
+                                <span class="calendar-day absent" title="13 May - Absent"></span>
+                                <span class="calendar-day present" title="14 May - Present"></span>
+                                <span class="calendar-day present" title="15 May - Present"></span>
+                                <span class="calendar-day present" title="16 May - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 21: MAY 17 - MAY 23 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="17 May - Sunday"></span>
+                                <span class="calendar-day present" title="18 May - Present"></span>
+                                <span class="calendar-day present" title="19 May - Present"></span>
+                                <span class="calendar-day present" title="20 May - Present"></span>
+                                <span class="calendar-day present" title="21 May - Present"></span>
+                                <span class="calendar-day absent" title="22 May - Absent"></span>
+                                <span class="calendar-day present" title="23 May - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 22: MAY 24 - MAY 30 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="24 May - Sunday"></span>
+                                <span class="calendar-day present" title="25 May - Present"></span>
+                                <span class="calendar-day present" title="26 May - Present"></span>
+                                <span class="calendar-day present" title="27 May - Present"></span>
+                                <span class="calendar-day absent" title="28 May - Absent"></span>
+                                <span class="calendar-day present" title="29 May - Present"></span>
+                                <span class="calendar-day present" title="30 May - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 23: MAY 31 - JUN 06 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="31 May - Sunday"></span>
+                                <span class="calendar-day present" title="01 Jun - Present"></span>
+                                <span class="calendar-day absent" title="02 Jun - Absent"></span>
+                                <span class="calendar-day present" title="03 Jun - Present"></span>
+                                <span class="calendar-day present" title="04 Jun - Present"></span>
+                                <span class="calendar-day present" title="05 Jun - Present"></span>
+                                <span class="calendar-day present" title="06 Jun - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 24: JUN 07 - JUN 13 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="07 Jun - Sunday"></span>
+                                <span class="calendar-day present" title="08 Jun - Present"></span>
+                                <span class="calendar-day present" title="09 Jun - Present"></span>
+                                <span class="calendar-day absent" title="10 Jun - Absent"></span>
+                                <span class="calendar-day present" title="11 Jun - Present"></span>
+                                <span class="calendar-day present" title="12 Jun - Present"></span>
+                                <span class="calendar-day present" title="13 Jun - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 25: JUN 14 - JUN 20 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="14 Jun - Sunday"></span>
+                                <span class="calendar-day present" title="15 Jun - Present"></span>
+                                <span class="calendar-day present" title="16 Jun - Present"></span>
+                                <span class="calendar-day present" title="17 Jun - Present"></span>
+                                <span class="calendar-day absent" title="18 Jun - Absent"></span>
+                                <span class="calendar-day present" title="19 Jun - Present"></span>
+                                <span class="calendar-day present" title="20 Jun - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 26: JUN 21 - JUN 27 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="21 Jun - Sunday"></span>
+                                <span class="calendar-day present" title="22 Jun - Present"></span>
+                                <span class="calendar-day present" title="23 Jun - Present"></span>
+                                <span class="calendar-day present" title="24 Jun - Present"></span>
+                                <span class="calendar-day present" title="25 Jun - Present"></span>
+                                <span class="calendar-day absent" title="26 Jun - Absent"></span>
+                                <span class="calendar-day present" title="27 Jun - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 27: JUN 28 - JUL 04 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="28 Jun - Sunday"></span>
+                                <span class="calendar-day present" title="29 Jun - Present"></span>
+                                <span class="calendar-day present" title="30 Jun - Present"></span>
+                                <span class="calendar-day present" title="01 Jul - Present"></span>
+                                <span class="calendar-day absent" title="02 Jul - Absent"></span>
+                                <span class="calendar-day present" title="03 Jul - Present"></span>
+                                <span class="calendar-day present" title="04 Jul - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 28: JUL 05 - JUL 11 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="05 Jul - Sunday"></span>
+                                <span class="calendar-day present" title="06 Jul - Present"></span>
+                                <span class="calendar-day present" title="07 Jul - Present"></span>
+                                <span class="calendar-day present" title="08 Jul - Present"></span>
+                                <span class="calendar-day present" title="09 Jul - Present"></span>
+                                <span class="calendar-day absent" title="10 Jul - Absent"></span>
+                                <span class="calendar-day present" title="11 Jul - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 29: JUL 12 - JUL 18 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="12 Jul - Sunday"></span>
+                                <span class="calendar-day present" title="13 Jul - Present"></span>
+                                <span class="calendar-day absent" title="14 Jul - Absent"></span>
+                                <span class="calendar-day present" title="15 Jul - Present"></span>
+                                <span class="calendar-day present" title="16 Jul - Present"></span>
+                                <span class="calendar-day present" title="17 Jul - Present"></span>
+                                <span class="calendar-day present" title="18 Jul - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 30: JUL 19 - JUL 25 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="19 Jul - Sunday"></span>
+                                <span class="calendar-day present" title="20 Jul - Present"></span>
+                                <span class="calendar-day present" title="21 Jul - Present"></span>
+                                <span class="calendar-day present" title="22 Jul - Present"></span>
+                                <span class="calendar-day absent" title="23 Jul - Absent"></span>
+                                <span class="calendar-day present" title="24 Jul - Present"></span>
+                                <span class="calendar-day present" title="25 Jul - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 31: JUL 26 - AUG 01 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="26 Jul - Sunday"></span>
+                                <span class="calendar-day present" title="27 Jul - Present"></span>
+                                <span class="calendar-day present" title="28 Jul - Present"></span>
+                                <span class="calendar-day absent" title="29 Jul - Absent"></span>
+                                <span class="calendar-day present" title="30 Jul - Present"></span>
+                                <span class="calendar-day present" title="31 Jul - Present"></span>
+                                <span class="calendar-day present" title="01 Aug - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 32: AUG 02 - AUG 08 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="02 Aug - Sunday"></span>
+                                <span class="calendar-day present" title="03 Aug - Present"></span>
+                                <span class="calendar-day present" title="04 Aug - Present"></span>
+                                <span class="calendar-day present" title="05 Aug - Present"></span>
+                                <span class="calendar-day absent" title="06 Aug - Absent"></span>
+                                <span class="calendar-day present" title="07 Aug - Present"></span>
+                                <span class="calendar-day present" title="08 Aug - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 33: AUG 09 - AUG 15 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="09 Aug - Sunday"></span>
+                                <span class="calendar-day present" title="10 Aug - Present"></span>
+                                <span class="calendar-day present" title="11 Aug - Present"></span>
+                                <span class="calendar-day absent" title="12 Aug - Absent"></span>
+                                <span class="calendar-day present" title="13 Aug - Present"></span>
+                                <span class="calendar-day present" title="14 Aug - Present"></span>
+                                <span class="calendar-day holiday" title="15 Aug - Independence Day"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 34: AUG 16 - AUG 22 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="16 Aug - Sunday"></span>
+                                <span class="calendar-day present" title="17 Aug - Present"></span>
+                                <span class="calendar-day present" title="18 Aug - Present"></span>
+                                <span class="calendar-day present" title="19 Aug - Present"></span>
+                                <span class="calendar-day present" title="20 Aug - Present"></span>
+                                <span class="calendar-day absent" title="21 Aug - Absent"></span>
+                                <span class="calendar-day present" title="22 Aug - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 35: AUG 23 - AUG 29 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="23 Aug - Sunday"></span>
+                                <span class="calendar-day present" title="24 Aug - Present"></span>
+                                <span class="calendar-day present" title="25 Aug - Present"></span>
+                                <span class="calendar-day present" title="26 Aug - Present"></span>
+                                <span class="calendar-day absent" title="27 Aug - Absent"></span>
+                                <span class="calendar-day present" title="28 Aug - Present"></span>
+                                <span class="calendar-day present" title="29 Aug - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 36: AUG 30 - SEP 05 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="30 Aug - Sunday"></span>
+                                <span class="calendar-day present" title="31 Aug - Present"></span>
+                                <span class="calendar-day present" title="01 Sep - Present"></span>
+                                <span class="calendar-day absent" title="02 Sep - Absent"></span>
+                                <span class="calendar-day present" title="03 Sep - Present"></span>
+                                <span class="calendar-day present" title="04 Sep - Present"></span>
+                                <span class="calendar-day present" title="05 Sep - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 37: SEP 06 - SEP 12 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="06 Sep - Sunday"></span>
+                                <span class="calendar-day present" title="07 Sep - Present"></span>
+                                <span class="calendar-day present" title="08 Sep - Present"></span>
+                                <span class="calendar-day present" title="09 Sep - Present"></span>
+                                <span class="calendar-day absent" title="10 Sep - Absent"></span>
+                                <span class="calendar-day present" title="11 Sep - Present"></span>
+                                <span class="calendar-day present" title="12 Sep - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 38: SEP 13 - SEP 19 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="13 Sep - Sunday"></span>
+                                <span class="calendar-day present" title="14 Sep - Present"></span>
+                                <span class="calendar-day present" title="15 Sep - Present"></span>
+                                <span class="calendar-day absent" title="16 Sep - Absent"></span>
+                                <span class="calendar-day present" title="17 Sep - Present"></span>
+                                <span class="calendar-day present" title="18 Sep - Present"></span>
+                                <span class="calendar-day present" title="19 Sep - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 39: SEP 20 - SEP 26 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="20 Sep - Sunday"></span>
+                                <span class="calendar-day present" title="21 Sep - Present"></span>
+                                <span class="calendar-day present" title="22 Sep - Present"></span>
+                                <span class="calendar-day present" title="23 Sep - Present"></span>
+                                <span class="calendar-day present" title="24 Sep - Present"></span>
+                                <span class="calendar-day absent" title="25 Sep - Absent"></span>
+                                <span class="calendar-day present" title="26 Sep - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 40: SEP 27 - OCT 03 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="27 Sep - Sunday"></span>
+                                <span class="calendar-day present" title="28 Sep - Present"></span>
+                                <span class="calendar-day present" title="29 Sep - Present"></span>
+                                <span class="calendar-day present" title="30 Sep - Present"></span>
+                                <span class="calendar-day absent" title="01 Oct - Absent"></span>
+                                <span class="calendar-day holiday" title="02 Oct - Gandhi Jayanti"></span>
+                                <span class="calendar-day present" title="03 Oct - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 41: OCT 04 - OCT 10 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="04 Oct - Sunday"></span>
+                                <span class="calendar-day present" title="05 Oct - Present"></span>
+                                <span class="calendar-day present" title="06 Oct - Present"></span>
+                                <span class="calendar-day absent" title="07 Oct - Absent"></span>
+                                <span class="calendar-day present" title="08 Oct - Present"></span>
+                                <span class="calendar-day present" title="09 Oct - Present"></span>
+                                <span class="calendar-day present" title="10 Oct - Present"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 42: OCT 11 - OCT 17 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day holiday" title="11 Oct - Sunday"></span>
+                                <span class="calendar-day present" title="12 Oct - Present"></span>
+                                <span class="calendar-day present" title="13 Oct - Present"></span>
+                                <span class="calendar-day absent" title="14 Oct - Absent"></span>
+                                <span class="calendar-day present" title="15 Oct - Present"></span>
+                                <span class="calendar-day present" title="16 Oct - Present"></span>
+                                <span class="calendar-day no-record" title="17 Oct - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 43: OCT 18 - OCT 24 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="18 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="19 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="20 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="21 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="22 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="23 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="24 Oct - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 44: OCT 25 - OCT 31 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="25 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="26 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="27 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="28 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="29 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="30 Oct - Not Marked"></span>
+                                <span class="calendar-day no-record" title="31 Oct - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 45: NOV 01 - NOV 07 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="01 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="02 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="03 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="04 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="05 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="06 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="07 Nov - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 46: NOV 08 - NOV 14 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="08 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="09 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="10 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="11 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="12 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="13 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="14 Nov - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 47: NOV 15 - NOV 21 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="15 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="16 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="17 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="18 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="19 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="20 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="21 Nov - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 48: NOV 22 - NOV 28 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="22 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="23 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="24 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="25 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="26 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="27 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="28 Nov - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 49: NOV 29 - DEC 05 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="29 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="30 Nov - Not Marked"></span>
+                                <span class="calendar-day no-record" title="01 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="02 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="03 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="04 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="05 Dec - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 50: DEC 06 - DEC 12 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="06 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="07 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="08 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="09 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="10 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="11 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="12 Dec - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 51: DEC 13 - DEC 19 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="13 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="14 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="15 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="16 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="17 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="18 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="19 Dec - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 52: DEC 20 - DEC 26 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="20 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="21 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="22 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="23 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="24 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="25 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="26 Dec - Not Marked"></span>
+
+                            </div>
+
+
+                            <!-- WEEK 53: DEC 27 - JAN 02 -->
+
+                            <div class="calendar-week">
+
+                                <span class="calendar-day no-record" title="27 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="28 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="29 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="30 Dec - Not Marked"></span>
+                                <span class="calendar-day no-record" title="31 Dec - Not Marked"></span>
+
+                                <span class="calendar-day outside-year"></span>
+                                <span class="calendar-day outside-year"></span>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -187,73 +1019,77 @@
 
             </div>
 
-            <!-- CALENDAR LEGEND -->
+
+            <!-- ================= CALENDAR LEGEND ================= -->
 
             <div class="calendar-legend">
 
                 <div class="legend-item">
                     <span class="legend-box present"></span>
-                    Present
+                    <span>Present</span>
                 </div>
 
                 <div class="legend-item">
                     <span class="legend-box absent"></span>
-                    Absent
+                    <span>Absent</span>
                 </div>
 
                 <div class="legend-item">
                     <span class="legend-box holiday"></span>
-                    Holiday
+                    <span>Holiday</span>
                 </div>
 
                 <div class="legend-item">
                     <span class="legend-box no-record"></span>
-                    Not Marked
+                    <span>Not Marked</span>
                 </div>
 
             </div>
 
             <p class="calendar-note">
-                Hover over or select a date to view its attendance details.
+                Hover over any attendance square to view the date
+                and attendance status.
             </p>
 
         </section>
 
-        <!-- SELECTED DATE DETAILS -->
+
+        <!-- ================= ATTENDANCE DETAILS ================= -->
 
         <section class="card">
 
-            <h2>Daily Attendance Details</h2>
+            <h2>Attendance Information</h2>
 
             <div class="date-details">
 
                 <div class="detail-item">
-                    <label>Selected Date</label>
-                    <strong id="selectedDate">Select a date</strong>
+                    <label>Academic Year</label>
+                    <strong>2026 - 2027</strong>
                 </div>
 
                 <div class="detail-item">
-                    <label>Day</label>
-                    <strong id="selectedDay">-</strong>
+                    <label>Current Semester</label>
+                    <strong>Semester III</strong>
+                </div>
+
+                <div class="detail-item">
+                    <label>Minimum Attendance</label>
+                    <strong>75%</strong>
                 </div>
 
                 <div class="detail-item">
                     <label>Attendance Status</label>
-                    <span id="selectedStatus" class="status-badge">
-                        Not Selected
+                    <span class="status-badge present">
+                        Eligible
                     </span>
-                </div>
-
-                <div class="detail-item">
-                    <label>Additional Information</label>
-                    <strong id="selectedInfo">-</strong>
                 </div>
 
             </div>
 
         </section>
 
-        <!-- MONTHLY ATTENDANCE SUMMARY -->
+
+        <!-- ================= MONTHLY ATTENDANCE SUMMARY ================= -->
 
         <section class="card">
 
@@ -263,7 +1099,8 @@
                     <h2>Monthly Attendance Summary</h2>
 
                     <p>
-                        View your attendance statistics for each month.
+                        View your attendance performance
+                        for each month.
                     </p>
                 </div>
 
@@ -280,12 +1117,108 @@
                             <th>Present</th>
                             <th>Absent</th>
                             <th>Attendance %</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
 
-                    <tbody id="monthlyTableBody"></tbody>
+                    <tbody>
+
+                        <tr>
+                            <td>July 2026</td>
+                            <td>25</td>
+                            <td>22</td>
+                            <td>3</td>
+                            <td class="green-text">88%</td>
+                            <td>
+                                <span class="status-badge present">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>August 2026</td>
+                            <td>25</td>
+                            <td>20</td>
+                            <td>5</td>
+                            <td class="green-text">80%</td>
+                            <td>
+                                <span class="status-badge present">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>September 2026</td>
+                            <td>25</td>
+                            <td>23</td>
+                            <td>2</td>
+                            <td class="green-text">92%</td>
+                            <td>
+                                <span class="status-badge present">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>October 2026</td>
+                            <td>25</td>
+                            <td>20</td>
+                            <td>5</td>
+                            <td class="green-text">80%</td>
+                            <td>
+                                <span class="status-badge present">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>100</strong></td>
+                            <td><strong>85</strong></td>
+                            <td><strong>15</strong></td>
+                            <td><strong>85%</strong></td>
+                            <td>
+                                <span class="status-badge present">
+                                    Eligible
+                                </span>
+                            </td>
+                        </tr>
+                    </tfoot>
 
                 </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="card">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-actions">
+
+                <a href="03_student_reports.html" class="action-button">
+                    View Attendance Reports
+                </a>
+
+                <a href="04_student_defaulter.html" class="action-button">
+                    Check Defaulter Status
+                </a>
+
+                <a href="06_student_correction_requests.html"
+                   class="action-button primary-button">
+                    Request Attendance Correction
+                </a>
 
             </div>
 
@@ -294,4 +1227,5 @@
     </main>
 
 </body>
+
 </html>

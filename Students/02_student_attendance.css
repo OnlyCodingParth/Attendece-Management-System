@@ -1,31 +1,57 @@
-/* ========== GLOBAL STYLES ========== */
+/* =========================================================
+   STUDENT ATTENDANCE PAGE
+   File: 02_student_attendance.css
+   College Attendance Management System
+   HTML + CSS ONLY — NO JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL STYLES
+========================================================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #f1f5f9;
+    background-color: #f1f5f9;
     color: #17365d;
     min-height: 100vh;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-/* ========== SIDEBAR ========== */
+
+/* =========================================================
+   02. SIDEBAR
+========================================================= */
 
 .sidebar {
     width: 277px;
     height: 100vh;
-    background: #284f7b;
-    color: white;
+
+    background-color: #284f7b;
+    color: #ffffff;
+
     padding: 25px 15px;
+
     position: fixed;
     top: 0;
     left: 0;
+
     overflow-y: auto;
+    z-index: 100;
 }
+
+/* Sidebar Logo */
 
 .logo {
     padding: 0 10px 25px;
@@ -34,6 +60,8 @@ body {
 
 .logo h2 {
     font-size: 19px;
+    font-weight: 700;
+    color: #ffffff;
     margin-bottom: 8px;
 }
 
@@ -42,25 +70,37 @@ body {
     color: #dce7f5;
 }
 
+/* Sidebar Navigation */
+
 .nav {
     margin-top: 23px;
 }
 
 .nav a {
     display: block;
+
     padding: 13px;
     margin-bottom: 5px;
-    color: white;
+
+    color: #ffffff;
     text-decoration: none;
+
     border-radius: 5px;
     font-size: 15px;
-    transition: background 0.2s;
+
+    transition: background-color 0.2s ease;
 }
 
-.nav a:hover,
-.nav a.active {
-    background: #3b6896;
+.nav a:hover {
+    background-color: #3b6896;
 }
+
+.nav a.active {
+    background-color: #3b6896;
+    font-weight: 500;
+}
+
+/* Logout */
 
 .logout {
     margin-top: 35px;
@@ -68,7 +108,14 @@ body {
     border-top: 1px solid #48698d;
 }
 
-/* ========== MAIN CONTENT ========== */
+.logout a {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   03. MAIN CONTENT
+========================================================= */
 
 .main {
     margin-left: 277px;
@@ -76,16 +123,20 @@ body {
     min-width: 0;
 }
 
+/* Page Header */
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 20px;
     margin-bottom: 27px;
 }
 
 .header h1 {
     font-size: 27px;
+    font-weight: 700;
     color: #244c79;
 }
 
@@ -95,91 +146,131 @@ body {
     margin-top: 7px;
 }
 
+/* User Badge */
+
 .user-badge {
-    background: white;
+    background-color: #ffffff;
+
     border: 1px solid #d7e1ed;
     border-radius: 5px;
+
     padding: 12px 17px;
+
     font-size: 14px;
     color: #45678d;
+
     white-space: nowrap;
 }
 
-/* ========== COMMON CARDS ========== */
+
+/* =========================================================
+   04. COMMON CARDS
+========================================================= */
 
 .card {
-    background: white;
+    background-color: #ffffff;
+
     border: 1px solid #dbe4ef;
     border-radius: 6px;
+
     padding: 22px;
     margin-bottom: 22px;
+
     min-width: 0;
 }
 
 .card h2 {
     font-size: 20px;
+    font-weight: 700;
     color: #244c79;
+
     margin-bottom: 12px;
 }
 
-/* ========== STUDENT DETAILS ========== */
+
+/* =========================================================
+   05. STUDENT DETAILS
+========================================================= */
 
 .student-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 20px;
 }
 
 .student-details h2 {
     font-size: 21px;
+    color: #244c79;
+    margin-bottom: 12px;
 }
 
 .student-details p {
-    color: #64748b;
     font-size: 14px;
+    color: #64748b;
+
     margin-top: 9px;
 }
 
 .student-details strong {
     color: #244c79;
+    font-weight: 600;
 }
 
+/* Academic Year Badge */
+
 .academic-badge {
-    padding: 10px 15px;
-    background: #e8f0fa;
+    background-color: #e8f0fa;
     color: #244c79;
+
+    padding: 10px 15px;
+
     border-radius: 5px;
     font-size: 13px;
+
     white-space: nowrap;
 }
 
-/* ========== STATISTICS ========== */
+
+/* =========================================================
+   06. ATTENDANCE STATISTICS
+========================================================= */
 
 .stats {
     display: grid;
+
     grid-template-columns: repeat(4, minmax(0, 1fr));
+
     gap: 18px;
     margin-bottom: 22px;
 }
 
 .stat-card {
-    background: white;
+    background-color: #ffffff;
+
     border: 1px solid #dbe4ef;
     border-radius: 6px;
+
     padding: 21px;
+
+    min-width: 0;
 }
 
 .stat-card p {
     font-size: 14px;
     color: #64748b;
+
     margin-bottom: 10px;
 }
 
 .stat-card h2 {
     font-size: 27px;
+    font-weight: 700;
     color: #244c79;
 }
+
+/* Statistics Colors */
 
 .green-text {
     color: #23965b !important;
@@ -189,161 +280,359 @@ body {
     color: #d35454 !important;
 }
 
-/* ========== SECTION HEADING ========== */
+
+/* =========================================================
+   07. SECTION HEADINGS
+========================================================= */
 
 .section-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 20px;
     margin-bottom: 24px;
 }
 
 .section-heading h2 {
+    font-size: 20px;
+    color: #244c79;
     margin-bottom: 8px;
 }
 
 .section-heading p {
     font-size: 14px;
     color: #64748b;
+
     line-height: 1.6;
 }
 
-/* ========== YEAR FILTER ========== */
+/* Calendar Year Badge */
 
-.calendar-filter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.calendar-filter label {
-    font-size: 14px;
-    color: #64748b;
-}
-
-.calendar-filter select {
-    padding: 9px 13px;
-    border: 1px solid #dbe4ef;
-    border-radius: 5px;
-    background: white;
+.year-badge {
+    background-color: #e8f0fa;
     color: #244c79;
-    font-size: 14px;
-    cursor: pointer;
+
+    padding: 10px 15px;
+
+    border: 1px solid #d4e2f1;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
 }
 
-/* ========== GITHUB CALENDAR ========== */
+
+/* =========================================================
+   08. GITHUB-STYLE ATTENDANCE CALENDAR
+========================================================= */
+
+/*
+   Calendar Structure:
+
+   .calendar-scroll
+       .calendar-layout
+           .weekday-labels
+           .calendar-content
+               .month-labels
+               .calendar-grid
+                   .calendar-week
+                       .calendar-day
+
+   Each calendar week contains seven squares.
+
+   Sunday    -> Row 1
+   Monday    -> Row 2
+   Tuesday   -> Row 3
+   Wednesday -> Row 4
+   Thursday  -> Row 5
+   Friday    -> Row 6
+   Saturday  -> Row 7
+
+   Weeks are arranged horizontally.
+*/
+
+
+/* Calendar Scroll Container */
 
 .calendar-scroll {
     width: 100%;
+
     overflow-x: auto;
-    padding: 10px 0 18px;
+    overflow-y: hidden;
+
+    padding: 12px 0 22px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
 }
+
+/* Chrome / Edge Scrollbar */
+
+.calendar-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.calendar-scroll::-webkit-scrollbar-track {
+    background-color: #f1f5f9;
+    border-radius: 10px;
+}
+
+.calendar-scroll::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+.calendar-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+}
+
+
+/* Main Calendar Layout */
 
 .calendar-layout {
     display: flex;
+    align-items: flex-start;
+
     gap: 15px;
+
     width: max-content;
+    min-width: max-content;
 }
+
+
+/* =========================================================
+   09. WEEKDAY LABELS
+========================================================= */
 
 .weekday-labels {
     display: grid;
+
     grid-template-rows: repeat(7, 15px);
+
     gap: 5px;
+
     padding-top: 29px;
+
+    flex-shrink: 0;
 }
 
 .weekday-labels span {
+    display: flex;
+    align-items: center;
+
     height: 15px;
+
     font-size: 11px;
     color: #64748b;
+
     line-height: 15px;
 }
 
+
+/* =========================================================
+   10. CALENDAR CONTENT
+========================================================= */
+
 .calendar-content {
     width: max-content;
+    min-width: max-content;
+
+    flex-shrink: 0;
 }
+
+
+/* =========================================================
+   11. MONTH LABELS
+========================================================= */
 
 .month-labels {
     position: relative;
+
+    width: 1060px;
     height: 29px;
+
+    margin-bottom: 0;
 }
 
-.month-label {
+.month-labels span {
     position: absolute;
     top: 0;
+
     font-size: 12px;
+    font-weight: 500;
+
     color: #64748b;
+
+    white-space: nowrap;
 }
+
+
+/* =========================================================
+   12. CALENDAR GRID
+========================================================= */
+
+/*
+   53 weeks for the year 2026.
+
+   Each week:
+   15px square + 5px gap = 20px
+
+   Total calendar width:
+   (53 * 15px) + (52 * 5px)
+   = 1055px
+*/
 
 .calendar-grid {
     display: flex;
+    align-items: flex-start;
+
     gap: 5px;
+
     width: max-content;
+    min-width: max-content;
 }
+
+
+/* =========================================================
+   13. INDIVIDUAL CALENDAR WEEK
+========================================================= */
 
 .calendar-week {
     display: grid;
+
+    grid-template-columns: 15px;
     grid-template-rows: repeat(7, 15px);
+
     gap: 5px;
+
+    width: 15px;
+
+    flex-shrink: 0;
 }
+
+
+/* =========================================================
+   14. INDIVIDUAL ATTENDANCE SQUARE
+========================================================= */
 
 .calendar-day {
+    display: block;
+
     width: 15px;
     height: 15px;
+
+    background-color: #e2e8f0;
+
+    border: 1px solid rgba(0, 0, 0, 0.03);
     border-radius: 3px;
-    border: 0;
-    background: #e2e8f0;
-    cursor: pointer;
-    transition: transform 0.15s, outline 0.15s;
+
+    cursor: help;
+
+    transition:
+        transform 0.15s ease,
+        outline 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
-.calendar-day:hover {
-    transform: scale(1.2);
-    outline: 2px solid #244c79;
-    outline-offset: 1px;
-    position: relative;
-    z-index: 2;
+
+/* =========================================================
+   15. ATTENDANCE COLORS
+========================================================= */
+
+/* PRESENT - GREEN */
+
+.calendar-day.present {
+    background-color: #40a66a;
+    border-color: #37975e;
 }
 
-.calendar-day:focus-visible {
-    outline: 2px solid #244c79;
-    outline-offset: 2px;
+/* ABSENT - RED */
+
+.calendar-day.absent {
+    background-color: #d76565;
+    border-color: #c95757;
 }
 
-.calendar-day.selected {
-    outline: 2px solid #244c79;
-    outline-offset: 2px;
+/* HOLIDAY - YELLOW */
+
+.calendar-day.holiday {
+    background-color: #efc14b;
+    border-color: #e1b33c;
 }
+
+/* NOT MARKED - GRAY */
+
+.calendar-day.no-record {
+    background-color: #e2e8f0;
+    border-color: #d5dde8;
+}
+
+/* OUTSIDE SELECTED YEAR */
 
 .calendar-day.outside-year {
     visibility: hidden;
     pointer-events: none;
 }
 
-.present {
-    background: #40a66a;
+
+/* =========================================================
+   16. CALENDAR HOVER EFFECTS
+========================================================= */
+
+.calendar-day:not(.outside-year):hover {
+    transform: scale(1.3);
+
+    outline: 2px solid #244c79;
+    outline-offset: 2px;
+
+    box-shadow: 0 2px 6px rgba(36, 76, 121, 0.15);
+
+    position: relative;
+    z-index: 10;
 }
 
-.absent {
-    background: #d76565;
+/* Hover - Present */
+
+.calendar-day.present:hover {
+    background-color: #2f9559;
 }
 
-.holiday {
-    background: #efc14b;
+/* Hover - Absent */
+
+.calendar-day.absent:hover {
+    background-color: #c65353;
 }
 
-.no-record {
-    background: #e2e8f0;
+/* Hover - Holiday */
+
+.calendar-day.holiday:hover {
+    background-color: #e2b239;
 }
 
-/* ========== CALENDAR LEGEND ========== */
+/* Hover - Not Marked */
+
+.calendar-day.no-record:hover {
+    background-color: #cbd5e1;
+}
+
+
+/* =========================================================
+   17. CALENDAR LEGEND
+========================================================= */
 
 .calendar-legend {
     display: flex;
+    align-items: center;
+
     flex-wrap: wrap;
-    gap: 20px;
+
+    gap: 22px;
+
     margin-top: 15px;
+
     font-size: 13px;
     color: #64748b;
 }
@@ -351,142 +640,296 @@ body {
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 7px;
+
+    gap: 8px;
 }
 
 .legend-box {
-    width: 13px;
-    height: 13px;
+    display: inline-block;
+
+    width: 14px;
+    height: 14px;
+
     border-radius: 3px;
+
+    flex-shrink: 0;
 }
+
+/* Legend Colors */
+
+.legend-box.present {
+    background-color: #40a66a;
+}
+
+.legend-box.absent {
+    background-color: #d76565;
+}
+
+.legend-box.holiday {
+    background-color: #efc14b;
+}
+
+.legend-box.no-record {
+    background-color: #e2e8f0;
+    border: 1px solid #d5dde8;
+}
+
+
+/* =========================================================
+   18. CALENDAR NOTE
+========================================================= */
 
 .calendar-note {
     margin-top: 18px;
+
     font-size: 13px;
     color: #64748b;
+
+    line-height: 1.7;
 }
 
-/* ========== DAILY DETAILS ========== */
+
+/* =========================================================
+   19. ATTENDANCE INFORMATION
+========================================================= */
 
 .date-details {
     display: grid;
+
     grid-template-columns: repeat(4, minmax(0, 1fr));
+
     gap: 20px;
+
     margin-top: 20px;
+}
+
+.detail-item {
+    min-width: 0;
 }
 
 .detail-item label {
     display: block;
+
     font-size: 13px;
     color: #718096;
+
     margin-bottom: 10px;
 }
 
 .detail-item strong {
+    display: block;
+
     font-size: 14px;
     color: #244c79;
+
     overflow-wrap: anywhere;
 }
 
+
+/* =========================================================
+   20. ATTENDANCE STATUS BADGES
+========================================================= */
+
 .status-badge {
     display: inline-block;
-    padding: 6px 11px;
+
+    padding: 6px 12px;
+
     border-radius: 20px;
+
     font-size: 12px;
-    font-weight: bold;
-    background: #e2e8f0;
-    color: #475569;
+    font-weight: 600;
+
+    white-space: nowrap;
 }
 
+/* Eligible / Present */
+
 .status-badge.present {
-    background: #e0f2e6;
+    background-color: #e0f2e6;
     color: #16703b;
 }
 
+/* Absent / Low */
+
 .status-badge.absent {
-    background: #fae3e3;
+    background-color: #fae3e3;
     color: #bd3636;
 }
 
+/* Holiday */
+
 .status-badge.holiday {
-    background: #fff2d6;
+    background-color: #fff2d6;
     color: #a66a08;
 }
 
-/* ========== MONTHLY TABLE ========== */
+/* Not Marked */
+
+.status-badge.no-record {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+
+/* =========================================================
+   21. MONTHLY ATTENDANCE TABLE
+========================================================= */
 
 .table-wrapper {
+    width: 100%;
     overflow-x: auto;
 }
 
 table {
     width: 100%;
+    min-width: 650px;
+
     border-collapse: collapse;
+
     font-size: 14px;
-    min-width: 580px;
 }
 
+/* Table Header */
+
 thead {
-    background: #f3f6fa;
+    background-color: #f3f6fa;
 }
 
 th {
     text-align: left;
+
     padding: 15px 13px;
+
     color: #38577a;
     font-weight: 600;
+
+    border-bottom: 1px solid #e2e8f0;
 }
+
+/* Table Body */
 
 td {
     padding: 15px 13px;
+
     border-bottom: 1px solid #e2e8f0;
+
     color: #17365d;
 }
 
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
 tbody tr:hover {
-    background: #f8fafc;
+    background-color: #f8fafc;
 }
 
-.percentage-good {
-    color: #23965b;
-    font-weight: bold;
+/* Table Footer */
+
+tfoot {
+    background-color: #f3f6fa;
 }
 
-.percentage-low {
-    color: #d35454;
-    font-weight: bold;
+tfoot td {
+    font-weight: 600;
+    border-top: 1px solid #dbe4ef;
 }
 
-/* ========== RESPONSIVE ========== */
 
-@media (max-width: 1100px) {
+/* =========================================================
+   22. QUICK ACTIONS
+========================================================= */
+
+.quick-actions {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-top: 20px;
+}
+
+.action-button {
+    display: inline-block;
+
+    padding: 12px 17px;
+
+    background-color: #e8f0fa;
+    color: #244c79;
+
+    border: 1px solid #bdd0e5;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: #dce9f8;
+    border-color: #a8c4e0;
+}
+
+/* Primary Action */
+
+.primary-button {
+    background-color: #284f7b;
+    color: #ffffff;
+
+    border-color: #284f7b;
+}
+
+.primary-button:hover {
+    background-color: #3b6896;
+    border-color: #3b6896;
+}
+
+
+/* =========================================================
+   23. RESPONSIVE - LAPTOP / TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .main {
+        padding: 24px;
+    }
 
     .stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .date-details {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
 
-@media (max-width: 700px) {
+
+/* =========================================================
+   24. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
 
     .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
+        width: 230px;
     }
 
     .main {
-        margin-left: 0;
-        padding: 18px;
+        margin-left: 230px;
+        padding: 20px;
     }
 
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
+    .header h1 {
+        font-size: 24px;
     }
 
     .student-details {
@@ -499,25 +942,178 @@ tbody tr:hover {
         align-items: flex-start;
     }
 
+}
+
+
+/* =========================================================
+   25. RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Sidebar */
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 20px 15px;
+    }
+
+    .logo {
+        padding-bottom: 18px;
+    }
+
+    .nav {
+        margin-top: 15px;
+    }
+
+    .nav a {
+        padding: 11px 12px;
+        font-size: 14px;
+    }
+
+    .logout {
+        margin-top: 20px;
+    }
+
+    /* Main */
+
+    .main {
+        margin-left: 0;
+        padding: 18px;
+    }
+
+    /* Header */
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    /* Cards */
+
+    .card {
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    /* Student Details */
+
+    .student-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .academic-badge {
+        white-space: normal;
+    }
+
+    /* Statistics */
+
     .stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 12px;
+        margin-bottom: 18px;
     }
 
     .stat-card {
         padding: 15px;
     }
 
+    .stat-card p {
+        font-size: 12px;
+    }
+
     .stat-card h2 {
         font-size: 23px;
     }
 
-    .date-details {
-        grid-template-columns: 1fr;
+    /* Calendar */
+
+    .calendar-scroll {
+        padding-bottom: 18px;
     }
 
-    .card {
-        padding: 18px;
+    .calendar-legend {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .calendar-note {
+        font-size: 12px;
+    }
+
+    /* Attendance Details */
+
+    .date-details {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    /* Quick Actions */
+
+    .quick-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-button {
+        width: 100%;
+        text-align: center;
     }
 
 }
+
+
+/* =========================================================
+   26. VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .main {
+        padding: 12px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .calendar-legend {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   END OF STUDENT ATTENDANCE CSS
+========================================================= */

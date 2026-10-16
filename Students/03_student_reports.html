@@ -1,523 +1,416 @@
-/* ========== GLOBAL STYLES ========== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background: #f1f5f9;
-    color: #17365d;
-    min-height: 100vh;
-}
-
-/* ========== SIDEBAR ========== */
-
-.sidebar {
-    width: 277px;
-    height: 100vh;
-    background: #284f7b;
-    color: white;
-    padding: 25px 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-}
-
-.logo {
-    padding: 0 10px 25px;
-    border-bottom: 1px solid #48698d;
-}
-
-.logo h2 {
-    font-size: 19px;
-    margin-bottom: 8px;
-}
-
-.logo p {
-    font-size: 13px;
-    color: #dce7f5;
-}
-
-.nav {
-    margin-top: 23px;
-}
-
-.nav a {
-    display: block;
-    padding: 13px;
-    margin-bottom: 5px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 15px;
-    transition: background 0.2s;
-}
-
-.nav a:hover,
-.nav a.active {
-    background: #3b6896;
-}
-
-.logout {
-    margin-top: 35px;
-    padding-top: 15px;
-    border-top: 1px solid #48698d;
-}
-
-/* ========== MAIN CONTENT ========== */
-
-.main {
-    margin-left: 277px;
-    padding: 28px;
-    min-width: 0;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 27px;
-}
-
-.header h1 {
-    font-size: 27px;
-    color: #244c79;
-}
-
-.header p {
-    font-size: 15px;
-    color: #64748b;
-    margin-top: 7px;
-}
-
-.user-badge {
-    background: white;
-    border: 1px solid #d7e1ed;
-    border-radius: 5px;
-    padding: 12px 17px;
-    font-size: 14px;
-    color: #45678d;
-    white-space: nowrap;
-}
-
-/* ========== COMMON CARDS ========== */
-
-.card {
-    background: white;
-    border: 1px solid #dbe4ef;
-    border-radius: 6px;
-    padding: 22px;
-    margin-bottom: 22px;
-    min-width: 0;
-}
-
-.card h2 {
-    font-size: 20px;
-    color: #244c79;
-    margin-bottom: 12px;
-}
-
-/* ========== STUDENT DETAILS ========== */
-
-.student-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.student-details h2 {
-    font-size: 21px;
-}
-
-.student-details p {
-    color: #64748b;
-    font-size: 14px;
-    margin-top: 9px;
-}
-
-.student-details strong {
-    color: #244c79;
-}
-
-.academic-badge {
-    padding: 10px 15px;
-    background: #e8f0fa;
-    color: #244c79;
-    border-radius: 5px;
-    font-size: 13px;
-    white-space: nowrap;
-}
-
-/* ========== STATISTICS ========== */
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-    margin-bottom: 22px;
-}
-
-.stat-card {
-    background: white;
-    border: 1px solid #dbe4ef;
-    border-radius: 6px;
-    padding: 21px;
-}
-
-.stat-card p {
-    font-size: 14px;
-    color: #64748b;
-    margin-bottom: 10px;
-}
-
-.stat-card h2 {
-    font-size: 27px;
-    color: #244c79;
-}
-
-.green-text {
-    color: #23965b !important;
-}
-
-.red-text {
-    color: #d35454 !important;
-}
-
-/* ========== SECTION HEADING ========== */
-
-.section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 24px;
-}
-
-.section-heading h2 {
-    margin-bottom: 8px;
-}
-
-.section-heading p {
-    font-size: 14px;
-    color: #64748b;
-    line-height: 1.6;
-}
-
-/* ========== YEAR FILTER ========== */
-
-.calendar-filter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.calendar-filter label {
-    font-size: 14px;
-    color: #64748b;
-}
-
-.calendar-filter select {
-    padding: 9px 13px;
-    border: 1px solid #dbe4ef;
-    border-radius: 5px;
-    background: white;
-    color: #244c79;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-/* ========== GITHUB CALENDAR ========== */
-
-.calendar-scroll {
-    width: 100%;
-    overflow-x: auto;
-    padding: 10px 0 18px;
-}
-
-.calendar-layout {
-    display: flex;
-    gap: 15px;
-    width: max-content;
-}
-
-.weekday-labels {
-    display: grid;
-    grid-template-rows: repeat(7, 15px);
-    gap: 5px;
-    padding-top: 29px;
-}
-
-.weekday-labels span {
-    height: 15px;
-    font-size: 11px;
-    color: #64748b;
-    line-height: 15px;
-}
-
-.calendar-content {
-    width: max-content;
-}
-
-.month-labels {
-    position: relative;
-    height: 29px;
-}
-
-.month-label {
-    position: absolute;
-    top: 0;
-    font-size: 12px;
-    color: #64748b;
-}
-
-.calendar-grid {
-    display: flex;
-    gap: 5px;
-    width: max-content;
-}
-
-.calendar-week {
-    display: grid;
-    grid-template-rows: repeat(7, 15px);
-    gap: 5px;
-}
-
-.calendar-day {
-    width: 15px;
-    height: 15px;
-    border-radius: 3px;
-    border: 0;
-    background: #e2e8f0;
-    cursor: pointer;
-    transition: transform 0.15s, outline 0.15s;
-}
-
-.calendar-day:hover {
-    transform: scale(1.2);
-    outline: 2px solid #244c79;
-    outline-offset: 1px;
-    position: relative;
-    z-index: 2;
-}
-
-.calendar-day:focus-visible {
-    outline: 2px solid #244c79;
-    outline-offset: 2px;
-}
-
-.calendar-day.selected {
-    outline: 2px solid #244c79;
-    outline-offset: 2px;
-}
-
-.calendar-day.outside-year {
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.present {
-    background: #40a66a;
-}
-
-.absent {
-    background: #d76565;
-}
-
-.holiday {
-    background: #efc14b;
-}
-
-.no-record {
-    background: #e2e8f0;
-}
-
-/* ========== CALENDAR LEGEND ========== */
-
-.calendar-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 15px;
-    font-size: 13px;
-    color: #64748b;
-}
-
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.legend-box {
-    width: 13px;
-    height: 13px;
-    border-radius: 3px;
-}
-
-.calendar-note {
-    margin-top: 18px;
-    font-size: 13px;
-    color: #64748b;
-}
-
-/* ========== DAILY DETAILS ========== */
-
-.date-details {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.detail-item label {
-    display: block;
-    font-size: 13px;
-    color: #718096;
-    margin-bottom: 10px;
-}
-
-.detail-item strong {
-    font-size: 14px;
-    color: #244c79;
-    overflow-wrap: anywhere;
-}
-
-.status-badge {
-    display: inline-block;
-    padding: 6px 11px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    background: #e2e8f0;
-    color: #475569;
-}
-
-.status-badge.present {
-    background: #e0f2e6;
-    color: #16703b;
-}
-
-.status-badge.absent {
-    background: #fae3e3;
-    color: #bd3636;
-}
-
-.status-badge.holiday {
-    background: #fff2d6;
-    color: #a66a08;
-}
-
-/* ========== MONTHLY TABLE ========== */
-
-.table-wrapper {
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    min-width: 580px;
-}
-
-thead {
-    background: #f3f6fa;
-}
-
-th {
-    text-align: left;
-    padding: 15px 13px;
-    color: #38577a;
-    font-weight: 600;
-}
-
-td {
-    padding: 15px 13px;
-    border-bottom: 1px solid #e2e8f0;
-    color: #17365d;
-}
-
-tbody tr:hover {
-    background: #f8fafc;
-}
-
-.percentage-good {
-    color: #23965b;
-    font-weight: bold;
-}
-
-.percentage-low {
-    color: #d35454;
-    font-weight: bold;
-}
-
-/* ========== RESPONSIVE ========== */
-
-@media (max-width: 1100px) {
-
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .date-details {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-@media (max-width: 700px) {
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    .main {
-        margin-left: 0;
-        padding: 18px;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .student-details {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .section-heading {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .stats {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .stat-card {
-        padding: 15px;
-    }
-
-    .stat-card h2 {
-        font-size: 23px;
-    }
-
-    .date-details {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        padding: 18px;
-    }
-
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Reports | College Attendance</title>
+
+    <link rel="stylesheet" href="03_student_reports.css">
+</head>
+
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>College Attendance</h2>
+            <p>Management System</p>
+        </div>
+
+        <nav class="nav">
+
+            <a href="01_student_dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="02_student_attendance.html">
+                My Attendance
+            </a>
+
+            <a href="03_student_reports.html" class="active">
+                Attendance Reports
+            </a>
+
+            <a href="04_student_defaulter.html">
+                Defaulter Status
+            </a>
+
+            <a href="05_student_profile.html">
+                My Profile
+            </a>
+
+            <a href="06_student_correction_requests.html">
+                Correction Requests
+            </a>
+
+            <div class="logout">
+                <a href="#">Logout</a>
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="main">
+
+        <!-- PAGE HEADER -->
+
+        <header class="header">
+
+            <div>
+                <h1>Attendance Reports</h1>
+
+                <p>
+                    View your monthly and semester-wise attendance performance.
+                </p>
+            </div>
+
+            <div class="user-badge">
+                Parth Gavali
+            </div>
+
+        </header>
+
+        <!-- ========== REPORT INFORMATION ========== -->
+
+        <section class="card report-info">
+
+            <div>
+                <h2>My Attendance Report</h2>
+
+                <p>
+                    Student Name:
+                    <strong>Parth Sambhaji Gavali</strong>
+                </p>
+
+                <p>
+                    Class:
+                    <strong>SY CSE - Division A</strong>
+                </p>
+
+                <p>
+                    Academic Year:
+                    <strong>2026 - 2027</strong>
+                </p>
+            </div>
+
+            <div class="report-badge">
+                Semester III
+            </div>
+
+        </section>
+
+        <!-- ========== ATTENDANCE STATISTICS ========== -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Working Days</p>
+                <h2>100</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Present Days</p>
+                <h2 class="green-text">85</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Absent Days</p>
+                <h2 class="red-text">15</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Overall Attendance</p>
+                <h2>85%</h2>
+            </div>
+
+        </section>
+
+        <!-- ========== OVERALL ATTENDANCE ========== -->
+
+        <section class="card">
+
+            <h2>Overall Attendance Performance</h2>
+
+            <div class="progress-header">
+                <span>Current Attendance</span>
+                <strong>85%</strong>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+
+            <div class="progress-footer">
+                <span>Minimum Required: 75%</span>
+                <span class="green-text">Good Attendance</span>
+            </div>
+
+        </section>
+
+        <!-- ========== MONTHLY ATTENDANCE CHART ========== -->
+
+        <section class="card">
+
+            <h2>Monthly Attendance Overview</h2>
+
+            <p class="section-description">
+                Compare your attendance percentage across different months.
+            </p>
+
+            <div class="chart-container">
+
+                <div class="chart-grid">
+
+                    <div class="grid-line">
+                        <span>100%</span>
+                    </div>
+
+                    <div class="grid-line">
+                        <span>75%</span>
+                    </div>
+
+                    <div class="grid-line">
+                        <span>50%</span>
+                    </div>
+
+                    <div class="grid-line">
+                        <span>25%</span>
+                    </div>
+
+                    <div class="grid-line">
+                        <span>0%</span>
+                    </div>
+
+                </div>
+
+                <div class="chart-bars">
+
+                    <div class="bar-group">
+                        <div class="bar-area">
+                            <div class="bar good" style="height: 88%;">
+                                <span>88%</span>
+                            </div>
+                        </div>
+                        <p>Jul</p>
+                    </div>
+
+                    <div class="bar-group">
+                        <div class="bar-area">
+                            <div class="bar good" style="height: 80%;">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                        <p>Aug</p>
+                    </div>
+
+                    <div class="bar-group">
+                        <div class="bar-area">
+                            <div class="bar good" style="height: 92%;">
+                                <span>92%</span>
+                            </div>
+                        </div>
+                        <p>Sep</p>
+                    </div>
+
+                    <div class="bar-group">
+                        <div class="bar-area">
+                            <div class="bar low" style="height: 72%;">
+                                <span>72%</span>
+                            </div>
+                        </div>
+                        <p>Oct</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="chart-legend">
+
+                <div>
+                    <span class="legend-box good-bg"></span>
+                    75% and Above
+                </div>
+
+                <div>
+                    <span class="legend-box low-bg"></span>
+                    Below 75%
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========== MONTHLY ATTENDANCE TABLE ========== -->
+
+        <section class="card">
+
+            <h2>Monthly Attendance Report</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Working Days</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Attendance</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>July 2026</td>
+                            <td>25</td>
+                            <td>22</td>
+                            <td>3</td>
+                            <td class="green-text">88%</td>
+                            <td>
+                                <span class="badge badge-good">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>August 2026</td>
+                            <td>25</td>
+                            <td>20</td>
+                            <td>5</td>
+                            <td class="green-text">80%</td>
+                            <td>
+                                <span class="badge badge-good">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>September 2026</td>
+                            <td>25</td>
+                            <td>23</td>
+                            <td>2</td>
+                            <td class="green-text">92%</td>
+                            <td>
+                                <span class="badge badge-good">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>October 2026</td>
+                            <td>25</td>
+                            <td>18</td>
+                            <td>7</td>
+                            <td class="red-text">72%</td>
+                            <td>
+                                <span class="badge badge-low">
+                                    Low
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>100</strong></td>
+                            <td><strong>83</strong></td>
+                            <td><strong>17</strong></td>
+                            <td><strong>83%</strong></td>
+                            <td>
+                                <span class="badge badge-good">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ========== SEMESTER REPORT ========== -->
+
+        <section class="card">
+
+            <h2>Semester Attendance Summary</h2>
+
+            <div class="semester-grid">
+
+                <div class="semester-card">
+
+                    <h3>Semester III</h3>
+
+                    <p>Academic Year 2026 - 2027</p>
+
+                    <div class="semester-details">
+
+                        <div>
+                            <span>Total Working Days</span>
+                            <strong>100</strong>
+                        </div>
+
+                        <div>
+                            <span>Present Days</span>
+                            <strong>85</strong>
+                        </div>
+
+                        <div>
+                            <span>Absent Days</span>
+                            <strong>15</strong>
+                        </div>
+
+                        <div>
+                            <span>Attendance</span>
+                            <strong class="green-text">85%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="semester-card">
+
+                    <h3>Attendance Requirement</h3>
+
+                    <p>College Attendance Policy</p>
+
+                    <div class="requirement-box">
+
+                        <h2>75%</h2>
+
+                        <p>Minimum Required Attendance</p>
+
+                    </div>
+
+                    <span class="badge badge-good">
+                        Requirement Satisfied
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
